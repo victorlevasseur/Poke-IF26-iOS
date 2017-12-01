@@ -8,8 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		73061E481FD1A1D60036F230 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 73061E471FD1A1C80036F230 /* libsqlite3.tbd */; };
-		73061E611FD1A3EF0036F230 /* SQLite in Resources */ = {isa = PBXBuildFile; fileRef = 73061E5F1FD1A3EE0036F230 /* SQLite */; };
-		73061E621FD1A3EF0036F230 /* Core in Resources */ = {isa = PBXBuildFile; fileRef = 73061E601FD1A3EE0036F230 /* Core */; };
+		73061E771FD1AA5E0036F230 /* DatabasePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E721FD1AA5E0036F230 /* DatabasePool.swift */; };
+		73061E781FD1AA5E0036F230 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E731FD1AA5E0036F230 /* Bindable.swift */; };
+		73061E791FD1AA5E0036F230 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E741FD1AA5E0036F230 /* Database.swift */; };
+		73061E7A1FD1AA5E0036F230 /* SquealErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E751FD1AA5E0036F230 /* SquealErrorCode.swift */; };
+		73061E7B1FD1AA5E0036F230 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E761FD1AA5E0036F230 /* Statement.swift */; };
+		73061E8E1FD1AA970036F230 /* DropIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E7E1FD1AA950036F230 /* DropIndex.swift */; };
+		73061E8F1FD1AA970036F230 /* Migrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E7F1FD1AA950036F230 /* Migrations.swift */; };
+		73061E901FD1AA970036F230 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E801FD1AA950036F230 /* Table.swift */; };
+		73061E911FD1AA970036F230 /* RenameTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E811FD1AA950036F230 /* RenameTable.swift */; };
+		73061E921FD1AA970036F230 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E821FD1AA950036F230 /* Column.swift */; };
+		73061E931FD1AA970036F230 /* CreateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E831FD1AA950036F230 /* CreateTable.swift */; };
+		73061E941FD1AA970036F230 /* Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E841FD1AA960036F230 /* Execute.swift */; };
+		73061E951FD1AA970036F230 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E851FD1AA960036F230 /* Schema.swift */; };
+		73061E961FD1AA970036F230 /* CreateIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E861FD1AA960036F230 /* CreateIndex.swift */; };
+		73061E971FD1AA970036F230 /* TableConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E871FD1AA960036F230 /* TableConstraint.swift */; };
+		73061E981FD1AA970036F230 /* SquealMigrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E881FD1AA960036F230 /* SquealMigrationError.swift */; };
+		73061E991FD1AA970036F230 /* AlterTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E891FD1AA960036F230 /* AlterTable.swift */; };
+		73061E9A1FD1AA970036F230 /* TableIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E8A1FD1AA960036F230 /* TableIndex.swift */; };
+		73061E9B1FD1AA970036F230 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E8B1FD1AA970036F230 /* Version.swift */; };
+		73061E9C1FD1AA970036F230 /* DropTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E8C1FD1AA970036F230 /* DropTable.swift */; };
+		73061E9D1FD1AA970036F230 /* RenameIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E8D1FD1AA970036F230 /* RenameIndex.swift */; };
+		73061EA41FD1AAB30036F230 /* DeleteHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E9E1FD1AAB20036F230 /* DeleteHelpers.swift */; };
+		73061EA51FD1AAB30036F230 /* InsertHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E9F1FD1AAB20036F230 /* InsertHelpers.swift */; };
+		73061EA61FD1AAB30036F230 /* TransactionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EA01FD1AAB20036F230 /* TransactionHelpers.swift */; };
+		73061EA71FD1AAB30036F230 /* SchemaHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EA11FD1AAB20036F230 /* SchemaHelpers.swift */; };
+		73061EA81FD1AAB30036F230 /* UpdateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EA21FD1AAB20036F230 /* UpdateHelpers.swift */; };
+		73061EA91FD1AAB30036F230 /* SelectHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EA31FD1AAB30036F230 /* SelectHelpers.swift */; };
+		73061EAD1FD1ACF10036F230 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EAC1FD1ACF10036F230 /* DatabaseService.swift */; };
 		936D64211FD1868700FDA2E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D64201FD1868700FDA2E3 /* AppDelegate.swift */; };
 		936D64231FD1868700FDA2E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D64221FD1868700FDA2E3 /* ViewController.swift */; };
 		936D64261FD1868700FDA2E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936D64241FD1868700FDA2E3 /* Main.storyboard */; };
@@ -38,9 +64,36 @@
 
 /* Begin PBXFileReference section */
 		73061E471FD1A1C80036F230 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		73061E5F1FD1A3EE0036F230 /* SQLite */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SQLite; sourceTree = "<group>"; };
-		73061E601FD1A3EE0036F230 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
 		73061E631FD1A45D0036F230 /* Poke-IF26-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poke-IF26-Bridging-Header.h"; sourceTree = "<group>"; };
+		73061E721FD1AA5E0036F230 /* DatabasePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabasePool.swift; sourceTree = "<group>"; };
+		73061E731FD1AA5E0036F230 /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		73061E741FD1AA5E0036F230 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		73061E751FD1AA5E0036F230 /* SquealErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquealErrorCode.swift; sourceTree = "<group>"; };
+		73061E761FD1AA5E0036F230 /* Statement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
+		73061E7E1FD1AA950036F230 /* DropIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropIndex.swift; sourceTree = "<group>"; };
+		73061E7F1FD1AA950036F230 /* Migrations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Migrations.swift; sourceTree = "<group>"; };
+		73061E801FD1AA950036F230 /* Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		73061E811FD1AA950036F230 /* RenameTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenameTable.swift; sourceTree = "<group>"; };
+		73061E821FD1AA950036F230 /* Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
+		73061E831FD1AA950036F230 /* CreateTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTable.swift; sourceTree = "<group>"; };
+		73061E841FD1AA960036F230 /* Execute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Execute.swift; sourceTree = "<group>"; };
+		73061E851FD1AA960036F230 /* Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
+		73061E861FD1AA960036F230 /* CreateIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIndex.swift; sourceTree = "<group>"; };
+		73061E871FD1AA960036F230 /* TableConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableConstraint.swift; sourceTree = "<group>"; };
+		73061E881FD1AA960036F230 /* SquealMigrationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquealMigrationError.swift; sourceTree = "<group>"; };
+		73061E891FD1AA960036F230 /* AlterTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterTable.swift; sourceTree = "<group>"; };
+		73061E8A1FD1AA960036F230 /* TableIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableIndex.swift; sourceTree = "<group>"; };
+		73061E8B1FD1AA970036F230 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		73061E8C1FD1AA970036F230 /* DropTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropTable.swift; sourceTree = "<group>"; };
+		73061E8D1FD1AA970036F230 /* RenameIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenameIndex.swift; sourceTree = "<group>"; };
+		73061E9E1FD1AAB20036F230 /* DeleteHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteHelpers.swift; sourceTree = "<group>"; };
+		73061E9F1FD1AAB20036F230 /* InsertHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertHelpers.swift; sourceTree = "<group>"; };
+		73061EA01FD1AAB20036F230 /* TransactionHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHelpers.swift; sourceTree = "<group>"; };
+		73061EA11FD1AAB20036F230 /* SchemaHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaHelpers.swift; sourceTree = "<group>"; };
+		73061EA21FD1AAB20036F230 /* UpdateHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateHelpers.swift; sourceTree = "<group>"; };
+		73061EA31FD1AAB30036F230 /* SelectHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectHelpers.swift; sourceTree = "<group>"; };
+		73061EAA1FD1AB090036F230 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		73061EAC1FD1ACF10036F230 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		936D641D1FD1868700FDA2E3 /* Poke-IF26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poke-IF26.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		936D64201FD1868700FDA2E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936D64221FD1868700FDA2E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,13 +143,71 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		73061E661FD1A4B20036F230 /* SharkORM */ = {
+		73061E6A1FD1A9EA0036F230 /* Squeals */ = {
 			isa = PBXGroup;
 			children = (
-				73061E5F1FD1A3EE0036F230 /* SQLite */,
-				73061E601FD1A3EE0036F230 /* Core */,
+				73061EAA1FD1AB090036F230 /* module.modulemap */,
+				73061E7D1FD1AA760036F230 /* Migrations */,
+				73061E7C1FD1AA6E0036F230 /* Helpers */,
+				73061E711FD1AA490036F230 /* Core */,
 			);
-			path = SharkORM;
+			path = Squeals;
+			sourceTree = "<group>";
+		};
+		73061E711FD1AA490036F230 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				73061E731FD1AA5E0036F230 /* Bindable.swift */,
+				73061E741FD1AA5E0036F230 /* Database.swift */,
+				73061E721FD1AA5E0036F230 /* DatabasePool.swift */,
+				73061E751FD1AA5E0036F230 /* SquealErrorCode.swift */,
+				73061E761FD1AA5E0036F230 /* Statement.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		73061E7C1FD1AA6E0036F230 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				73061E9E1FD1AAB20036F230 /* DeleteHelpers.swift */,
+				73061E9F1FD1AAB20036F230 /* InsertHelpers.swift */,
+				73061EA11FD1AAB20036F230 /* SchemaHelpers.swift */,
+				73061EA31FD1AAB30036F230 /* SelectHelpers.swift */,
+				73061EA01FD1AAB20036F230 /* TransactionHelpers.swift */,
+				73061EA21FD1AAB20036F230 /* UpdateHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		73061E7D1FD1AA760036F230 /* Migrations */ = {
+			isa = PBXGroup;
+			children = (
+				73061E891FD1AA960036F230 /* AlterTable.swift */,
+				73061E821FD1AA950036F230 /* Column.swift */,
+				73061E861FD1AA960036F230 /* CreateIndex.swift */,
+				73061E831FD1AA950036F230 /* CreateTable.swift */,
+				73061E7E1FD1AA950036F230 /* DropIndex.swift */,
+				73061E8C1FD1AA970036F230 /* DropTable.swift */,
+				73061E841FD1AA960036F230 /* Execute.swift */,
+				73061E7F1FD1AA950036F230 /* Migrations.swift */,
+				73061E8D1FD1AA970036F230 /* RenameIndex.swift */,
+				73061E811FD1AA950036F230 /* RenameTable.swift */,
+				73061E851FD1AA960036F230 /* Schema.swift */,
+				73061E881FD1AA960036F230 /* SquealMigrationError.swift */,
+				73061E801FD1AA950036F230 /* Table.swift */,
+				73061E871FD1AA960036F230 /* TableConstraint.swift */,
+				73061E8A1FD1AA960036F230 /* TableIndex.swift */,
+				73061E8B1FD1AA970036F230 /* Version.swift */,
+			);
+			path = Migrations;
+			sourceTree = "<group>";
+		};
+		73061EAB1FD1ACD70036F230 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				73061EAC1FD1ACF10036F230 /* DatabaseService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		936D64141FD1868700FDA2E3 = {
@@ -123,7 +234,8 @@
 		936D641F1FD1868700FDA2E3 /* Poke-IF26 */ = {
 			isa = PBXGroup;
 			children = (
-				73061E661FD1A4B20036F230 /* SharkORM */,
+				73061EAB1FD1ACD70036F230 /* Services */,
+				73061E6A1FD1A9EA0036F230 /* Squeals */,
 				936D64201FD1868700FDA2E3 /* AppDelegate.swift */,
 				936D64221FD1868700FDA2E3 /* ViewController.swift */,
 				936D64241FD1868700FDA2E3 /* Main.storyboard */,
@@ -261,10 +373,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73061E611FD1A3EF0036F230 /* SQLite in Resources */,
 				936D642B1FD1868700FDA2E3 /* LaunchScreen.storyboard in Resources */,
 				936D64281FD1868700FDA2E3 /* Assets.xcassets in Resources */,
-				73061E621FD1A3EF0036F230 /* Core in Resources */,
 				936D64261FD1868700FDA2E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,8 +400,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73061E7B1FD1AA5E0036F230 /* Statement.swift in Sources */,
+				73061E9C1FD1AA970036F230 /* DropTable.swift in Sources */,
+				73061E7A1FD1AA5E0036F230 /* SquealErrorCode.swift in Sources */,
+				73061E9D1FD1AA970036F230 /* RenameIndex.swift in Sources */,
+				73061EA91FD1AAB30036F230 /* SelectHelpers.swift in Sources */,
+				73061EA41FD1AAB30036F230 /* DeleteHelpers.swift in Sources */,
+				73061EAD1FD1ACF10036F230 /* DatabaseService.swift in Sources */,
 				936D64231FD1868700FDA2E3 /* ViewController.swift in Sources */,
+				73061E9A1FD1AA970036F230 /* TableIndex.swift in Sources */,
+				73061E9B1FD1AA970036F230 /* Version.swift in Sources */,
 				936D64211FD1868700FDA2E3 /* AppDelegate.swift in Sources */,
+				73061EA71FD1AAB30036F230 /* SchemaHelpers.swift in Sources */,
+				73061E991FD1AA970036F230 /* AlterTable.swift in Sources */,
+				73061E931FD1AA970036F230 /* CreateTable.swift in Sources */,
+				73061E971FD1AA970036F230 /* TableConstraint.swift in Sources */,
+				73061EA51FD1AAB30036F230 /* InsertHelpers.swift in Sources */,
+				73061E911FD1AA970036F230 /* RenameTable.swift in Sources */,
+				73061E921FD1AA970036F230 /* Column.swift in Sources */,
+				73061E981FD1AA970036F230 /* SquealMigrationError.swift in Sources */,
+				73061E781FD1AA5E0036F230 /* Bindable.swift in Sources */,
+				73061E961FD1AA970036F230 /* CreateIndex.swift in Sources */,
+				73061EA61FD1AAB30036F230 /* TransactionHelpers.swift in Sources */,
+				73061EA81FD1AAB30036F230 /* UpdateHelpers.swift in Sources */,
+				73061E791FD1AA5E0036F230 /* Database.swift in Sources */,
+				73061E951FD1AA970036F230 /* Schema.swift in Sources */,
+				73061E941FD1AA970036F230 /* Execute.swift in Sources */,
+				73061E901FD1AA970036F230 /* Table.swift in Sources */,
+				73061E771FD1AA5E0036F230 /* DatabasePool.swift in Sources */,
+				73061E8E1FD1AA970036F230 /* DropIndex.swift in Sources */,
+				73061E8F1FD1AA970036F230 /* Migrations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
