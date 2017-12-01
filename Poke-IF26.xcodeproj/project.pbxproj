@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		73061E481FD1A1D60036F230 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 73061E471FD1A1C80036F230 /* libsqlite3.tbd */; };
+		73061E611FD1A3EF0036F230 /* SQLite in Resources */ = {isa = PBXBuildFile; fileRef = 73061E5F1FD1A3EE0036F230 /* SQLite */; };
+		73061E621FD1A3EF0036F230 /* Core in Resources */ = {isa = PBXBuildFile; fileRef = 73061E601FD1A3EE0036F230 /* Core */; };
 		936D64211FD1868700FDA2E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D64201FD1868700FDA2E3 /* AppDelegate.swift */; };
 		936D64231FD1868700FDA2E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D64221FD1868700FDA2E3 /* ViewController.swift */; };
 		936D64261FD1868700FDA2E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936D64241FD1868700FDA2E3 /* Main.storyboard */; };
@@ -36,6 +38,9 @@
 
 /* Begin PBXFileReference section */
 		73061E471FD1A1C80036F230 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		73061E5F1FD1A3EE0036F230 /* SQLite */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SQLite; sourceTree = "<group>"; };
+		73061E601FD1A3EE0036F230 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
+		73061E631FD1A45D0036F230 /* Poke-IF26-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poke-IF26-Bridging-Header.h"; sourceTree = "<group>"; };
 		936D641D1FD1868700FDA2E3 /* Poke-IF26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poke-IF26.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		936D64201FD1868700FDA2E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936D64221FD1868700FDA2E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +90,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		73061E661FD1A4B20036F230 /* SharkORM */ = {
+			isa = PBXGroup;
+			children = (
+				73061E5F1FD1A3EE0036F230 /* SQLite */,
+				73061E601FD1A3EE0036F230 /* Core */,
+			);
+			path = SharkORM;
+			sourceTree = "<group>";
+		};
 		936D64141FD1868700FDA2E3 = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +123,14 @@
 		936D641F1FD1868700FDA2E3 /* Poke-IF26 */ = {
 			isa = PBXGroup;
 			children = (
+				73061E661FD1A4B20036F230 /* SharkORM */,
 				936D64201FD1868700FDA2E3 /* AppDelegate.swift */,
 				936D64221FD1868700FDA2E3 /* ViewController.swift */,
 				936D64241FD1868700FDA2E3 /* Main.storyboard */,
 				936D64271FD1868700FDA2E3 /* Assets.xcassets */,
 				936D64291FD1868700FDA2E3 /* LaunchScreen.storyboard */,
 				936D642C1FD1868700FDA2E3 /* Info.plist */,
+				73061E631FD1A45D0036F230 /* Poke-IF26-Bridging-Header.h */,
 			);
 			path = "Poke-IF26";
 			sourceTree = "<group>";
@@ -205,6 +221,7 @@
 				TargetAttributes = {
 					936D641C1FD1868700FDA2E3 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					936D64301FD1868700FDA2E3 = {
@@ -244,8 +261,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73061E611FD1A3EF0036F230 /* SQLite in Resources */,
 				936D642B1FD1868700FDA2E3 /* LaunchScreen.storyboard in Resources */,
 				936D64281FD1868700FDA2E3 /* Assets.xcassets in Resources */,
+				73061E621FD1A3EF0036F230 /* Core in Resources */,
 				936D64261FD1868700FDA2E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,11 +457,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Poke-IF26/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.utt.Poke-IF26";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Poke-IF26/Poke-IF26-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,11 +474,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Poke-IF26/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.utt.Poke-IF26";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Poke-IF26/Poke-IF26-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
