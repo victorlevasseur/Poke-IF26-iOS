@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Connexion-->
         <scene sceneID="L90-pD-gw3">
             <objects>
                 <viewController id="PA5-5J-UVH" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Jsp-ho-Aza"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IZU-tN-NKp"/>
+                    <navigationItem key="navigationItem" title="Connexion" id="IZU-tN-NKp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycr-yd-FfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
