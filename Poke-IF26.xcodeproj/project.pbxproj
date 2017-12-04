@@ -43,6 +43,10 @@
 		936D642B1FD1868700FDA2E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936D64291FD1868700FDA2E3 /* LaunchScreen.storyboard */; };
 		936D64361FD1868700FDA2E3 /* Poke_IF26Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D64351FD1868700FDA2E3 /* Poke_IF26Tests.swift */; };
 		936D64411FD1868700FDA2E3 /* Poke_IF26UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D64401FD1868700FDA2E3 /* Poke_IF26UITests.swift */; };
+		93BC28F31FD555890034351D /* ConnexionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC28F21FD555890034351D /* ConnexionViewController.swift */; };
+		93BC28F51FD557A80034351D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC28F41FD557A80034351D /* UserService.swift */; };
+		93BC28F81FD557EB0034351D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC28F71FD557EB0034351D /* User.swift */; };
+		93BC28FA1FD55F4A0034351D /* CryptoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC28F91FD55F4A0034351D /* CryptoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +111,10 @@
 		936D643C1FD1868700FDA2E3 /* Poke-IF26UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Poke-IF26UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		936D64401FD1868700FDA2E3 /* Poke_IF26UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poke_IF26UITests.swift; sourceTree = "<group>"; };
 		936D64421FD1868700FDA2E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BC28F21FD555890034351D /* ConnexionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnexionViewController.swift; sourceTree = "<group>"; };
+		93BC28F41FD557A80034351D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		93BC28F71FD557EB0034351D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		93BC28F91FD55F4A0034351D /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				73061EAC1FD1ACF10036F230 /* DatabaseService.swift */,
+				93BC28F41FD557A80034351D /* UserService.swift */,
+				93BC28F91FD55F4A0034351D /* CryptoService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -234,6 +244,8 @@
 		936D641F1FD1868700FDA2E3 /* Poke-IF26 */ = {
 			isa = PBXGroup;
 			children = (
+				93BC28F61FD557DA0034351D /* Entities */,
+				93BC28F11FD555540034351D /* Controllers */,
 				73061EAB1FD1ACD70036F230 /* Services */,
 				73061E6A1FD1A9EA0036F230 /* Squeals */,
 				936D64201FD1868700FDA2E3 /* AppDelegate.swift */,
@@ -263,6 +275,22 @@
 				936D64421FD1868700FDA2E3 /* Info.plist */,
 			);
 			path = "Poke-IF26UITests";
+			sourceTree = "<group>";
+		};
+		93BC28F11FD555540034351D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93BC28F21FD555890034351D /* ConnexionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		93BC28F61FD557DA0034351D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				93BC28F71FD557EB0034351D /* User.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +432,7 @@
 				73061E9C1FD1AA970036F230 /* DropTable.swift in Sources */,
 				73061E7A1FD1AA5E0036F230 /* SquealErrorCode.swift in Sources */,
 				73061E9D1FD1AA970036F230 /* RenameIndex.swift in Sources */,
+				93BC28FA1FD55F4A0034351D /* CryptoService.swift in Sources */,
 				73061EA91FD1AAB30036F230 /* SelectHelpers.swift in Sources */,
 				73061EA41FD1AAB30036F230 /* DeleteHelpers.swift in Sources */,
 				73061EAD1FD1ACF10036F230 /* DatabaseService.swift in Sources */,
@@ -425,11 +454,14 @@
 				73061EA81FD1AAB30036F230 /* UpdateHelpers.swift in Sources */,
 				73061E791FD1AA5E0036F230 /* Database.swift in Sources */,
 				73061E951FD1AA970036F230 /* Schema.swift in Sources */,
+				93BC28F31FD555890034351D /* ConnexionViewController.swift in Sources */,
 				73061E941FD1AA970036F230 /* Execute.swift in Sources */,
 				73061E901FD1AA970036F230 /* Table.swift in Sources */,
+				93BC28F51FD557A80034351D /* UserService.swift in Sources */,
 				73061E771FD1AA5E0036F230 /* DatabasePool.swift in Sources */,
 				73061E8E1FD1AA970036F230 /* DropIndex.swift in Sources */,
 				73061E8F1FD1AA970036F230 /* Migrations.swift in Sources */,
+				93BC28F81FD557EB0034351D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

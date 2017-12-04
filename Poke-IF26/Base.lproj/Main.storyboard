@@ -13,8 +13,8 @@
         <!--Connexion-->
         <scene sceneID="L90-pD-gw3">
             <objects>
-                <viewController id="PA5-5J-UVH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dyV-HO-oXM">
+                <viewController id="PA5-5J-UVH" customClass="ConnexionViewController" customModule="Poke_IF26" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dyV-HO-oXM" customClass="Co">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -44,6 +44,9 @@
                                 <rect key="frame" x="20" y="261" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Connexion"/>
+                                <connections>
+                                    <action selector="onConnectClick:" destination="PA5-5J-UVH" eventType="touchUpInside" id="FPn-Sv-4jz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom d'utilisateur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uq8-is-ugr">
                                 <rect key="frame" x="20" y="95" width="130" height="21"/>
@@ -64,6 +67,11 @@
                         <viewLayoutGuide key="safeArea" id="Jsp-ho-Aza"/>
                     </view>
                     <navigationItem key="navigationItem" title="Connexion" id="IZU-tN-NKp"/>
+                    <connections>
+                        <outlet property="loginButton" destination="3lq-dr-jEr" id="aDm-D0-U7V"/>
+                        <outlet property="loginInput" destination="cAD-OC-cHo" id="4TD-Qs-Cb9"/>
+                        <outlet property="passwordInput" destination="Mxo-aw-DCf" id="8Ep-3O-RB3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycr-yd-FfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
