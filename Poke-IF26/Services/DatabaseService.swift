@@ -15,7 +15,7 @@ class DatabaseService {
     private var db: Database
     
     init() throws {
-        self.db = try Database(path: "poke")
+        self.db = try Database()
     }
     
     static func getInstance() -> DatabaseService {
