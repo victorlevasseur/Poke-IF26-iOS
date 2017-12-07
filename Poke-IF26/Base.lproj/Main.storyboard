@@ -68,7 +68,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Connexion" id="IZU-tN-NKp"/>
                     <connections>
-                        <outlet property="loginButton" destination="3lq-dr-jEr" id="aDm-D0-U7V"/>
                         <outlet property="loginInput" destination="cAD-OC-cHo" id="4TD-Qs-Cb9"/>
                         <outlet property="passwordInput" destination="Mxo-aw-DCf" id="8Ep-3O-RB3"/>
                     </connections>
