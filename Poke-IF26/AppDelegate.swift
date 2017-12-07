@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        let db = Database()
+        let db = DatabaseService.getInstance().getDb();
         
         // Migrate to the latest version:
         do {
