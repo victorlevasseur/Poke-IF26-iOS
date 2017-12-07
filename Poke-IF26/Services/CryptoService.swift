@@ -39,8 +39,9 @@ class CryptoService {
         if (derivationStatus != 0) {
             throw CryptoServiceError.derivationFail
         }
-        
-        return String(bytes: derivedKey, encoding: String.Encoding.utf8)!;
+
+        let data = Data(bytes: derivedKey, count: derivedKey.count)
+        return data.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0));
     }
 }
 

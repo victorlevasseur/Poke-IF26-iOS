@@ -15,7 +15,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.`
+
+        let AppSchema = Schema(identifier:"users") { schema in
+            // Version 1:
+            schema.version(1) { v1 in
+                // Create a Table:
+                v1.createTable("users") { users in
+                    users.primaryKey("id")
+                    users.column("login", type:.Text, constraints:["NOT NULL"])
+                    users.column("hash", type:.Text, constraints:["NOT NULL"])
+                    users.column("salt", type:.Text, constraints:["NOT NULL"])
+                }
+            }
+        }
+        
+        let db = Database()
+        
+        // Migrate to the latest version:
+        do {
+            let _ = try AppSchema.migrate(db)
+        } catch {
+            print("Failed migration")
+        }
+        
         return true
     }
 

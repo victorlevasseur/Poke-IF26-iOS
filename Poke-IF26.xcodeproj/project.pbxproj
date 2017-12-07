@@ -36,6 +36,8 @@
 		73061EA81FD1AAB30036F230 /* UpdateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EA21FD1AAB20036F230 /* UpdateHelpers.swift */; };
 		73061EA91FD1AAB30036F230 /* SelectHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EA31FD1AAB30036F230 /* SelectHelpers.swift */; };
 		73061EAD1FD1ACF10036F230 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EAC1FD1ACF10036F230 /* DatabaseService.swift */; };
+		9322BCEC1FD97FC700DEF5D5 /* InscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322BCEB1FD97FC700DEF5D5 /* InscriptionViewController.swift */; };
+		9336E2581FD9720200A78BE1 /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9336E2571FD9720200A78BE1 /* UserDao.swift */; };
 		936D64211FD1868700FDA2E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D64201FD1868700FDA2E3 /* AppDelegate.swift */; };
 		936D64231FD1868700FDA2E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D64221FD1868700FDA2E3 /* ViewController.swift */; };
 		936D64261FD1868700FDA2E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936D64241FD1868700FDA2E3 /* Main.storyboard */; };
@@ -98,6 +100,8 @@
 		73061EA31FD1AAB30036F230 /* SelectHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectHelpers.swift; sourceTree = "<group>"; };
 		73061EAA1FD1AB090036F230 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		73061EAC1FD1ACF10036F230 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		9322BCEB1FD97FC700DEF5D5 /* InscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionViewController.swift; sourceTree = "<group>"; };
+		9336E2571FD9720200A78BE1 /* UserDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDao.swift; sourceTree = "<group>"; };
 		936D641D1FD1868700FDA2E3 /* Poke-IF26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poke-IF26.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		936D64201FD1868700FDA2E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936D64221FD1868700FDA2E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +224,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		9336E2561FD971E200A78BE1 /* Daos */ = {
+			isa = PBXGroup;
+			children = (
+				9336E2571FD9720200A78BE1 /* UserDao.swift */,
+			);
+			path = Daos;
+			sourceTree = "<group>";
+		};
 		936D64141FD1868700FDA2E3 = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				93BC28F21FD555890034351D /* ConnexionViewController.swift */,
+				9322BCEB1FD97FC700DEF5D5 /* InscriptionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,6 +301,7 @@
 		93BC28F61FD557DA0034351D /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				9336E2561FD971E200A78BE1 /* Daos */,
 				93BC28F71FD557EB0034351D /* User.swift */,
 			);
 			path = Entities;
@@ -445,11 +459,13 @@
 				73061E931FD1AA970036F230 /* CreateTable.swift in Sources */,
 				73061E971FD1AA970036F230 /* TableConstraint.swift in Sources */,
 				73061EA51FD1AAB30036F230 /* InsertHelpers.swift in Sources */,
+				9336E2581FD9720200A78BE1 /* UserDao.swift in Sources */,
 				73061E911FD1AA970036F230 /* RenameTable.swift in Sources */,
 				73061E921FD1AA970036F230 /* Column.swift in Sources */,
 				73061E981FD1AA970036F230 /* SquealMigrationError.swift in Sources */,
 				73061E781FD1AA5E0036F230 /* Bindable.swift in Sources */,
 				73061E961FD1AA970036F230 /* CreateIndex.swift in Sources */,
+				9322BCEC1FD97FC700DEF5D5 /* InscriptionViewController.swift in Sources */,
 				73061EA61FD1AAB30036F230 /* TransactionHelpers.swift in Sources */,
 				73061EA81FD1AAB30036F230 /* UpdateHelpers.swift in Sources */,
 				73061E791FD1AA5E0036F230 /* Database.swift in Sources */,

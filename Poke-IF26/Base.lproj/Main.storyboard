@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="250.72463768115944" y="371.73913043478262"/>
         </scene>
-        <!--View Controller-->
+        <!--Inscription View Controller-->
         <scene sceneID="KZG-Nv-K2C">
             <objects>
-                <viewController id="QiZ-al-9km" sceneMemberID="viewController">
+                <viewController id="QiZ-al-9km" customClass="InscriptionViewController" customModule="Poke_IF26" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qvs-Dq-qHV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,11 +130,19 @@
                                 <rect key="frame" x="20" y="336" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="S'inscrire"/>
+                                <connections>
+                                    <action selector="onRegisterClick:" destination="QiZ-al-9km" eventType="touchUpInside" id="eR5-v9-FHR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="mVc-wC-Zm9"/>
                     </view>
+                    <connections>
+                        <outlet property="loginInput" destination="wDA-pd-NBu" id="bQO-eL-kEx"/>
+                        <outlet property="passwordConfirmInput" destination="Uoj-sR-b6t" id="QFn-Ld-k41"/>
+                        <outlet property="passwordInput" destination="fMZ-5H-uIJ" id="55z-cJ-4CB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHQ-zi-Cyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
