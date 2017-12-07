@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import SharkORM
 
-class User: SRKObject {
-    dynamic var login: String?
-    dynamic var hash: String?
-    dynamic var salt: String?
+class User {
+    var login: String?
+    var hash: String?
+    var salt: String?
 }
