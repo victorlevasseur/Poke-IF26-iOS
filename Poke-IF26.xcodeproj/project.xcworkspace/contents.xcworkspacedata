@@ -2,27 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../../Downloads/sharkorm-master/CHANGELOG.md">
-   </FileRef>
-   <FileRef
-      location = "group:../../../Downloads/sharkorm-master/LICENSE">
-   </FileRef>
-   <FileRef
-      location = "group:../../../Downloads/sharkorm-master/README.md">
-   </FileRef>
-   <FileRef
-      location = "group:../../../Downloads/sharkorm-master/SharkORM">
-   </FileRef>
-   <FileRef
-      location = "group:../../../Downloads/sharkorm-master/SharkORM.podspec">
-   </FileRef>
-   <FileRef
-      location = "group:../../../Downloads/sharkorm-master/SharkORM.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:../../../Downloads/sharkorm-master/SharkORMTests">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

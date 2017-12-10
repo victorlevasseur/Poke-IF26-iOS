@@ -7,34 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73061E481FD1A1D60036F230 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 73061E471FD1A1C80036F230 /* libsqlite3.tbd */; };
-		73061E771FD1AA5E0036F230 /* DatabasePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E721FD1AA5E0036F230 /* DatabasePool.swift */; };
-		73061E781FD1AA5E0036F230 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E731FD1AA5E0036F230 /* Bindable.swift */; };
-		73061E791FD1AA5E0036F230 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E741FD1AA5E0036F230 /* Database.swift */; };
-		73061E7A1FD1AA5E0036F230 /* SquealErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E751FD1AA5E0036F230 /* SquealErrorCode.swift */; };
-		73061E7B1FD1AA5E0036F230 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E761FD1AA5E0036F230 /* Statement.swift */; };
-		73061E8E1FD1AA970036F230 /* DropIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E7E1FD1AA950036F230 /* DropIndex.swift */; };
-		73061E8F1FD1AA970036F230 /* Migrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E7F1FD1AA950036F230 /* Migrations.swift */; };
-		73061E901FD1AA970036F230 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E801FD1AA950036F230 /* Table.swift */; };
-		73061E911FD1AA970036F230 /* RenameTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E811FD1AA950036F230 /* RenameTable.swift */; };
-		73061E921FD1AA970036F230 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E821FD1AA950036F230 /* Column.swift */; };
-		73061E931FD1AA970036F230 /* CreateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E831FD1AA950036F230 /* CreateTable.swift */; };
-		73061E941FD1AA970036F230 /* Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E841FD1AA960036F230 /* Execute.swift */; };
-		73061E951FD1AA970036F230 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E851FD1AA960036F230 /* Schema.swift */; };
-		73061E961FD1AA970036F230 /* CreateIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E861FD1AA960036F230 /* CreateIndex.swift */; };
-		73061E971FD1AA970036F230 /* TableConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E871FD1AA960036F230 /* TableConstraint.swift */; };
-		73061E981FD1AA970036F230 /* SquealMigrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E881FD1AA960036F230 /* SquealMigrationError.swift */; };
-		73061E991FD1AA970036F230 /* AlterTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E891FD1AA960036F230 /* AlterTable.swift */; };
-		73061E9A1FD1AA970036F230 /* TableIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E8A1FD1AA960036F230 /* TableIndex.swift */; };
-		73061E9B1FD1AA970036F230 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E8B1FD1AA970036F230 /* Version.swift */; };
-		73061E9C1FD1AA970036F230 /* DropTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E8C1FD1AA970036F230 /* DropTable.swift */; };
-		73061E9D1FD1AA970036F230 /* RenameIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E8D1FD1AA970036F230 /* RenameIndex.swift */; };
-		73061EA41FD1AAB30036F230 /* DeleteHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E9E1FD1AAB20036F230 /* DeleteHelpers.swift */; };
-		73061EA51FD1AAB30036F230 /* InsertHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061E9F1FD1AAB20036F230 /* InsertHelpers.swift */; };
-		73061EA61FD1AAB30036F230 /* TransactionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EA01FD1AAB20036F230 /* TransactionHelpers.swift */; };
-		73061EA71FD1AAB30036F230 /* SchemaHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EA11FD1AAB20036F230 /* SchemaHelpers.swift */; };
-		73061EA81FD1AAB30036F230 /* UpdateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EA21FD1AAB20036F230 /* UpdateHelpers.swift */; };
-		73061EA91FD1AAB30036F230 /* SelectHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EA31FD1AAB30036F230 /* SelectHelpers.swift */; };
 		73061EAD1FD1ACF10036F230 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73061EAC1FD1ACF10036F230 /* DatabaseService.swift */; };
 		9322BCEC1FD97FC700DEF5D5 /* InscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322BCEB1FD97FC700DEF5D5 /* InscriptionViewController.swift */; };
 		9336E2581FD9720200A78BE1 /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9336E2571FD9720200A78BE1 /* UserDao.swift */; };
@@ -49,6 +21,10 @@
 		93BC28F51FD557A80034351D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC28F41FD557A80034351D /* UserService.swift */; };
 		93BC28F81FD557EB0034351D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC28F71FD557EB0034351D /* User.swift */; };
 		93BC28FA1FD55F4A0034351D /* CryptoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC28F91FD55F4A0034351D /* CryptoService.swift */; };
+		A40CC6B61FDDBF4400CF047C /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = A40CC6B51FDDBF4400CF047C /* Cartfile */; };
+		A40CC6B81FDDC4B000CF047C /* Squeal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40CC6B71FDDC4B000CF047C /* Squeal.framework */; };
+		A40CC6BB1FDDC62B00CF047C /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = A40CC6BA1FDDC62B00CF047C /* Cartfile.resolved */; };
+		A40CC6BD1FDDC92900CF047C /* Squeal.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A40CC6B71FDDC4B000CF047C /* Squeal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,37 +44,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A40CC6BC1FDDC91A00CF047C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A40CC6BD1FDDC92900CF047C /* Squeal.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		73061E471FD1A1C80036F230 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		73061E631FD1A45D0036F230 /* Poke-IF26-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poke-IF26-Bridging-Header.h"; sourceTree = "<group>"; };
-		73061E721FD1AA5E0036F230 /* DatabasePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabasePool.swift; sourceTree = "<group>"; };
-		73061E731FD1AA5E0036F230 /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
-		73061E741FD1AA5E0036F230 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		73061E751FD1AA5E0036F230 /* SquealErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquealErrorCode.swift; sourceTree = "<group>"; };
-		73061E761FD1AA5E0036F230 /* Statement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
-		73061E7E1FD1AA950036F230 /* DropIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropIndex.swift; sourceTree = "<group>"; };
-		73061E7F1FD1AA950036F230 /* Migrations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Migrations.swift; sourceTree = "<group>"; };
-		73061E801FD1AA950036F230 /* Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
-		73061E811FD1AA950036F230 /* RenameTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenameTable.swift; sourceTree = "<group>"; };
-		73061E821FD1AA950036F230 /* Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
-		73061E831FD1AA950036F230 /* CreateTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTable.swift; sourceTree = "<group>"; };
-		73061E841FD1AA960036F230 /* Execute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Execute.swift; sourceTree = "<group>"; };
-		73061E851FD1AA960036F230 /* Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
-		73061E861FD1AA960036F230 /* CreateIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIndex.swift; sourceTree = "<group>"; };
-		73061E871FD1AA960036F230 /* TableConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableConstraint.swift; sourceTree = "<group>"; };
-		73061E881FD1AA960036F230 /* SquealMigrationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquealMigrationError.swift; sourceTree = "<group>"; };
-		73061E891FD1AA960036F230 /* AlterTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterTable.swift; sourceTree = "<group>"; };
-		73061E8A1FD1AA960036F230 /* TableIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableIndex.swift; sourceTree = "<group>"; };
-		73061E8B1FD1AA970036F230 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
-		73061E8C1FD1AA970036F230 /* DropTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropTable.swift; sourceTree = "<group>"; };
-		73061E8D1FD1AA970036F230 /* RenameIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenameIndex.swift; sourceTree = "<group>"; };
-		73061E9E1FD1AAB20036F230 /* DeleteHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteHelpers.swift; sourceTree = "<group>"; };
-		73061E9F1FD1AAB20036F230 /* InsertHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertHelpers.swift; sourceTree = "<group>"; };
-		73061EA01FD1AAB20036F230 /* TransactionHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHelpers.swift; sourceTree = "<group>"; };
-		73061EA11FD1AAB20036F230 /* SchemaHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaHelpers.swift; sourceTree = "<group>"; };
-		73061EA21FD1AAB20036F230 /* UpdateHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateHelpers.swift; sourceTree = "<group>"; };
-		73061EA31FD1AAB30036F230 /* SelectHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectHelpers.swift; sourceTree = "<group>"; };
-		73061EAA1FD1AB090036F230 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		73061EAC1FD1ACF10036F230 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		9322BCEB1FD97FC700DEF5D5 /* InscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionViewController.swift; sourceTree = "<group>"; };
 		9336E2571FD9720200A78BE1 /* UserDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDao.swift; sourceTree = "<group>"; };
@@ -119,6 +79,9 @@
 		93BC28F41FD557A80034351D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		93BC28F71FD557EB0034351D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		93BC28F91FD55F4A0034351D /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
+		A40CC6B51FDDBF4400CF047C /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		A40CC6B71FDDC4B000CF047C /* Squeal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Squeal.framework; path = Carthage/Build/iOS/Squeal.framework; sourceTree = "<group>"; };
+		A40CC6BA1FDDC62B00CF047C /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73061E481FD1A1D60036F230 /* libsqlite3.tbd in Frameworks */,
+				A40CC6B81FDDC4B000CF047C /* Squeal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,68 +113,9 @@
 		73061E461FD1A1C80036F230 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				73061E471FD1A1C80036F230 /* libsqlite3.tbd */,
+				A40CC6B71FDDC4B000CF047C /* Squeal.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		73061E6A1FD1A9EA0036F230 /* Squeals */ = {
-			isa = PBXGroup;
-			children = (
-				73061EAA1FD1AB090036F230 /* module.modulemap */,
-				73061E7D1FD1AA760036F230 /* Migrations */,
-				73061E7C1FD1AA6E0036F230 /* Helpers */,
-				73061E711FD1AA490036F230 /* Core */,
-			);
-			path = Squeals;
-			sourceTree = "<group>";
-		};
-		73061E711FD1AA490036F230 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				73061E731FD1AA5E0036F230 /* Bindable.swift */,
-				73061E741FD1AA5E0036F230 /* Database.swift */,
-				73061E721FD1AA5E0036F230 /* DatabasePool.swift */,
-				73061E751FD1AA5E0036F230 /* SquealErrorCode.swift */,
-				73061E761FD1AA5E0036F230 /* Statement.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		73061E7C1FD1AA6E0036F230 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				73061E9E1FD1AAB20036F230 /* DeleteHelpers.swift */,
-				73061E9F1FD1AAB20036F230 /* InsertHelpers.swift */,
-				73061EA11FD1AAB20036F230 /* SchemaHelpers.swift */,
-				73061EA31FD1AAB30036F230 /* SelectHelpers.swift */,
-				73061EA01FD1AAB20036F230 /* TransactionHelpers.swift */,
-				73061EA21FD1AAB20036F230 /* UpdateHelpers.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		73061E7D1FD1AA760036F230 /* Migrations */ = {
-			isa = PBXGroup;
-			children = (
-				73061E891FD1AA960036F230 /* AlterTable.swift */,
-				73061E821FD1AA950036F230 /* Column.swift */,
-				73061E861FD1AA960036F230 /* CreateIndex.swift */,
-				73061E831FD1AA950036F230 /* CreateTable.swift */,
-				73061E7E1FD1AA950036F230 /* DropIndex.swift */,
-				73061E8C1FD1AA970036F230 /* DropTable.swift */,
-				73061E841FD1AA960036F230 /* Execute.swift */,
-				73061E7F1FD1AA950036F230 /* Migrations.swift */,
-				73061E8D1FD1AA970036F230 /* RenameIndex.swift */,
-				73061E811FD1AA950036F230 /* RenameTable.swift */,
-				73061E851FD1AA960036F230 /* Schema.swift */,
-				73061E881FD1AA960036F230 /* SquealMigrationError.swift */,
-				73061E801FD1AA950036F230 /* Table.swift */,
-				73061E871FD1AA960036F230 /* TableConstraint.swift */,
-				73061E8A1FD1AA960036F230 /* TableIndex.swift */,
-				73061E8B1FD1AA970036F230 /* Version.swift */,
-			);
-			path = Migrations;
 			sourceTree = "<group>";
 		};
 		73061EAB1FD1ACD70036F230 /* Services */ = {
@@ -235,6 +139,8 @@
 		936D64141FD1868700FDA2E3 = {
 			isa = PBXGroup;
 			children = (
+				A40CC6BA1FDDC62B00CF047C /* Cartfile.resolved */,
+				A40CC6B51FDDBF4400CF047C /* Cartfile */,
 				936D641F1FD1868700FDA2E3 /* Poke-IF26 */,
 				936D64341FD1868700FDA2E3 /* Poke-IF26Tests */,
 				936D643F1FD1868700FDA2E3 /* Poke-IF26UITests */,
@@ -259,7 +165,6 @@
 				93BC28F61FD557DA0034351D /* Entities */,
 				93BC28F11FD555540034351D /* Controllers */,
 				73061EAB1FD1ACD70036F230 /* Services */,
-				73061E6A1FD1A9EA0036F230 /* Squeals */,
 				936D64201FD1868700FDA2E3 /* AppDelegate.swift */,
 				936D64221FD1868700FDA2E3 /* ViewController.swift */,
 				936D64241FD1868700FDA2E3 /* Main.storyboard */,
@@ -317,6 +222,8 @@
 				936D64191FD1868700FDA2E3 /* Sources */,
 				936D641A1FD1868700FDA2E3 /* Frameworks */,
 				936D641B1FD1868700FDA2E3 /* Resources */,
+				A40CC6B91FDDC51200CF047C /* ShellScript */,
+				A40CC6BC1FDDC91A00CF047C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -417,6 +324,8 @@
 			files = (
 				936D642B1FD1868700FDA2E3 /* LaunchScreen.storyboard in Resources */,
 				936D64281FD1868700FDA2E3 /* Assets.xcassets in Resources */,
+				A40CC6B61FDDBF4400CF047C /* Cartfile in Resources */,
+				A40CC6BB1FDDC62B00CF047C /* Cartfile.resolved in Resources */,
 				936D64261FD1868700FDA2E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,46 +346,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A40CC6B91FDDC51200CF047C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		936D64191FD1868700FDA2E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73061E7B1FD1AA5E0036F230 /* Statement.swift in Sources */,
-				73061E9C1FD1AA970036F230 /* DropTable.swift in Sources */,
-				73061E7A1FD1AA5E0036F230 /* SquealErrorCode.swift in Sources */,
-				73061E9D1FD1AA970036F230 /* RenameIndex.swift in Sources */,
 				93BC28FA1FD55F4A0034351D /* CryptoService.swift in Sources */,
-				73061EA91FD1AAB30036F230 /* SelectHelpers.swift in Sources */,
-				73061EA41FD1AAB30036F230 /* DeleteHelpers.swift in Sources */,
 				73061EAD1FD1ACF10036F230 /* DatabaseService.swift in Sources */,
 				936D64231FD1868700FDA2E3 /* ViewController.swift in Sources */,
-				73061E9A1FD1AA970036F230 /* TableIndex.swift in Sources */,
-				73061E9B1FD1AA970036F230 /* Version.swift in Sources */,
 				936D64211FD1868700FDA2E3 /* AppDelegate.swift in Sources */,
-				73061EA71FD1AAB30036F230 /* SchemaHelpers.swift in Sources */,
-				73061E991FD1AA970036F230 /* AlterTable.swift in Sources */,
-				73061E931FD1AA970036F230 /* CreateTable.swift in Sources */,
-				73061E971FD1AA970036F230 /* TableConstraint.swift in Sources */,
-				73061EA51FD1AAB30036F230 /* InsertHelpers.swift in Sources */,
 				9336E2581FD9720200A78BE1 /* UserDao.swift in Sources */,
-				73061E911FD1AA970036F230 /* RenameTable.swift in Sources */,
-				73061E921FD1AA970036F230 /* Column.swift in Sources */,
-				73061E981FD1AA970036F230 /* SquealMigrationError.swift in Sources */,
-				73061E781FD1AA5E0036F230 /* Bindable.swift in Sources */,
-				73061E961FD1AA970036F230 /* CreateIndex.swift in Sources */,
 				9322BCEC1FD97FC700DEF5D5 /* InscriptionViewController.swift in Sources */,
-				73061EA61FD1AAB30036F230 /* TransactionHelpers.swift in Sources */,
-				73061EA81FD1AAB30036F230 /* UpdateHelpers.swift in Sources */,
-				73061E791FD1AA5E0036F230 /* Database.swift in Sources */,
-				73061E951FD1AA970036F230 /* Schema.swift in Sources */,
 				93BC28F31FD555890034351D /* ConnexionViewController.swift in Sources */,
-				73061E941FD1AA970036F230 /* Execute.swift in Sources */,
-				73061E901FD1AA970036F230 /* Table.swift in Sources */,
 				93BC28F51FD557A80034351D /* UserService.swift in Sources */,
-				73061E771FD1AA5E0036F230 /* DatabasePool.swift in Sources */,
-				73061E8E1FD1AA970036F230 /* DropIndex.swift in Sources */,
-				73061E8F1FD1AA970036F230 /* Migrations.swift in Sources */,
 				93BC28F81FD557EB0034351D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,6 +543,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Poke-IF26/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.utt.Poke-IF26";
@@ -662,6 +564,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Poke-IF26/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.utt.Poke-IF26";

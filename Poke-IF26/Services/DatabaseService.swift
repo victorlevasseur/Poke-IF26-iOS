@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Squeal
 
 class DatabaseService {
     

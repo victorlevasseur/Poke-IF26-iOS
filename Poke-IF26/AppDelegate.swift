@@ -6,6 +6,7 @@
 //  Copyright © 2017 GIRARD GUITTARD Antoine / LEVASSEUR Victor. All rights reserved.
 //
 
+import Squeal
 import UIKit
 
 @UIApplicationMain

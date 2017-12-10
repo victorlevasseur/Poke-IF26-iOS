@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Squeal
 
 struct User {
     let id: Int64?
