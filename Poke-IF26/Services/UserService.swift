@@ -19,7 +19,7 @@ class UserService {
             let hash = try cryptoService.deriveKeyFromPassword(password: password, salt: salt);
             
             let saltData = Data(bytes: salt, count: 30);
-            let user = User(id: nil, login: login, hash: hash, salt: String(data: saltData, encoding: String.Encoding.utf8));
+            let user = User(id: nil, login: login, hash: hash, salt: saltData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0)));
             
             let _ = try userDao.create(user: user);
         } catch CryptoServiceError.prngFail {
@@ -42,7 +42,7 @@ class UserService {
         do {
             let user = try userDao.loadByLogin(login: login)
             
-            let saltData = user.salt!.data(using: String.Encoding.utf8)!;
+            let saltData = Data(base64Encoded: user.salt!, options: NSData.Base64DecodingOptions(rawValue: 0))!;
             let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: saltData.count);
             let stream = OutputStream(toBuffer: buffer, capacity: saltData.count);
             stream.open();

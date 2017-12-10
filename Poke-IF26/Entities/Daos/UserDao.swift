@@ -29,7 +29,7 @@ class UserDao {
         do {
             let db = DatabaseService.getInstance().getDb();
             //injection sql?
-            let users = try db.selectFrom("users", whereExpr:"login == \(login)", block: User.init)
+            let users = try db.selectFrom("users", whereExpr:"login == ?", parameters: [login], block: User.init)
             if (users.count != 1) {
                 throw UserDaoError.notFound
             }
