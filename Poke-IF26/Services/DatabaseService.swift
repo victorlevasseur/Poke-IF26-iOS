@@ -16,7 +16,12 @@ class DatabaseService {
     private var db: Database
     
     init() throws {
-        self.db = try Database()
+        if let documentsPathURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let dbPath = documentsPathURL.appendingPathComponent("pokeif26.db")
+            self.db = try Database(path: dbPath.absoluteString)
+        } else {
+            throw DatabaseInitializationError.documentsPathNotFound
+        }
     }
     
     static func getInstance() -> DatabaseService {
@@ -33,4 +38,8 @@ class DatabaseService {
     func getDb() -> Database {
         return self.db
     }
+}
+
+enum DatabaseInitializationError: Error {
+    case documentsPathNotFound
 }
