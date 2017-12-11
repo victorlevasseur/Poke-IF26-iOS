@@ -33,6 +33,7 @@
 		A46777AD1FDEBE9A00DB2D0F /* GoogleMapsBase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46777AE1FDEBE9D00DB2D0F /* GoogleMapsCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46777AF1FDEBEA300DB2D0F /* GoogleMapsM4B.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4FF8A421FDED9B50068531F /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4FF8A411FDED9B50068531F /* Map.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Carthage/Build/iOS/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Carthage/Build/iOS/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = Carthage/Build/iOS/GoogleMapsM4B.framework; sourceTree = "<group>"; };
+		A4FF8A411FDED9B50068531F /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				936D64201FD1868700FDA2E3 /* AppDelegate.swift */,
 				936D64221FD1868700FDA2E3 /* ViewController.swift */,
 				936D64241FD1868700FDA2E3 /* Main.storyboard */,
+				A4FF8A411FDED9B50068531F /* Map.storyboard */,
 				936D64271FD1868700FDA2E3 /* Assets.xcassets */,
 				936D64291FD1868700FDA2E3 /* LaunchScreen.storyboard */,
 				936D642C1FD1868700FDA2E3 /* Info.plist */,
@@ -351,6 +354,7 @@
 				A40CC6B61FDDBF4400CF047C /* Cartfile in Resources */,
 				A40CC6BB1FDDC62B00CF047C /* Cartfile.resolved in Resources */,
 				936D64261FD1868700FDA2E3 /* Main.storyboard in Resources */,
+				A4FF8A421FDED9B50068531F /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

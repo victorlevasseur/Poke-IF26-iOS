@@ -48,9 +48,9 @@ class ConnexionViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default, handler: nil))
             self.present(alertController, animated: true, completion: nil)
         } else {
-            let alertController = UIAlertController(title: "Connexion", message: "Bon mot de passe", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alertController, animated: true, completion: nil)
+            let mapStoryboard = UIStoryboard(name: "Map", bundle: nil)
+            let controller = mapStoryboard.instantiateInitialViewController();
+            present(controller!, animated: true, completion: nil)
         }
     }
     
