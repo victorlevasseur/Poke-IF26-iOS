@@ -6,6 +6,7 @@
 //  Copyright © 2017 GIRARD GUITTARD Antoine / LEVASSEUR Victor. All rights reserved.
 //
 
+import GoogleMaps
 import Squeal
 import UIKit
 
@@ -38,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             print("Failed migration")
         }
+        
+        GMSServices.provideAPIKey("AlzaSyCLimqejg8h34k2QqQ8BRf0NTIUdxLcNS0")
         
         return true
     }

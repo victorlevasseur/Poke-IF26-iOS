@@ -25,6 +25,14 @@
 		A40CC6B81FDDC4B000CF047C /* Squeal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40CC6B71FDDC4B000CF047C /* Squeal.framework */; };
 		A40CC6BB1FDDC62B00CF047C /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = A40CC6BA1FDDC62B00CF047C /* Cartfile.resolved */; };
 		A40CC6BD1FDDC92900CF047C /* Squeal.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A40CC6B71FDDC4B000CF047C /* Squeal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A46777A51FDEBE4700DB2D0F /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46777A41FDEBE4700DB2D0F /* GoogleMaps.framework */; };
+		A46777A71FDEBE5900DB2D0F /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */; };
+		A46777A91FDEBE6A00DB2D0F /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */; };
+		A46777AB1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */; };
+		A46777AC1FDEBE9700DB2D0F /* GoogleMaps.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A41FDEBE4700DB2D0F /* GoogleMaps.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A46777AD1FDEBE9A00DB2D0F /* GoogleMapsBase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A46777AE1FDEBE9D00DB2D0F /* GoogleMapsCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A46777AF1FDEBEA300DB2D0F /* GoogleMapsM4B.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +59,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A46777AE1FDEBE9D00DB2D0F /* GoogleMapsCore.framework in CopyFiles */,
 				A40CC6BD1FDDC92900CF047C /* Squeal.framework in CopyFiles */,
+				A46777AC1FDEBE9700DB2D0F /* GoogleMaps.framework in CopyFiles */,
+				A46777AF1FDEBEA300DB2D0F /* GoogleMapsM4B.framework in CopyFiles */,
+				A46777AD1FDEBE9A00DB2D0F /* GoogleMapsBase.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +94,10 @@
 		A40CC6B51FDDBF4400CF047C /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		A40CC6B71FDDC4B000CF047C /* Squeal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Squeal.framework; path = Carthage/Build/iOS/Squeal.framework; sourceTree = "<group>"; };
 		A40CC6BA1FDDC62B00CF047C /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		A46777A41FDEBE4700DB2D0F /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Carthage/Build/iOS/GoogleMaps.framework; sourceTree = "<group>"; };
+		A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Carthage/Build/iOS/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Carthage/Build/iOS/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = Carthage/Build/iOS/GoogleMapsM4B.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +105,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46777AB1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework in Frameworks */,
+				A46777A91FDEBE6A00DB2D0F /* GoogleMapsCore.framework in Frameworks */,
+				A46777A71FDEBE5900DB2D0F /* GoogleMapsBase.framework in Frameworks */,
+				A46777A51FDEBE4700DB2D0F /* GoogleMaps.framework in Frameworks */,
 				A40CC6B81FDDC4B000CF047C /* Squeal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +133,10 @@
 		73061E461FD1A1C80036F230 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */,
+				A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */,
+				A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */,
+				A46777A41FDEBE4700DB2D0F /* GoogleMaps.framework */,
 				A40CC6B71FDDC4B000CF047C /* Squeal.framework */,
 			);
 			name = Frameworks;
