@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Failed migration")
         }
         
-        GMSServices.provideAPIKey("AlzaSyCLimqejg8h34k2QqQ8BRf0NTIUdxLcNS0")
+        GMSServices.provideAPIKey("AIzaSyC9_jPwnxWV3zrbRfauyE2jw7ooZPTNJhU")
         
         return true
     }

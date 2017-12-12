@@ -28,11 +28,10 @@
 		A46777A51FDEBE4700DB2D0F /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46777A41FDEBE4700DB2D0F /* GoogleMaps.framework */; };
 		A46777A71FDEBE5900DB2D0F /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */; };
 		A46777A91FDEBE6A00DB2D0F /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */; };
-		A46777AB1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */; };
 		A46777AC1FDEBE9700DB2D0F /* GoogleMaps.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A41FDEBE4700DB2D0F /* GoogleMaps.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46777AD1FDEBE9A00DB2D0F /* GoogleMapsBase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46777AE1FDEBE9D00DB2D0F /* GoogleMapsCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A46777AF1FDEBEA300DB2D0F /* GoogleMapsM4B.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A49A8F291FDFD13A0070D7A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */; };
 		A4FF8A421FDED9B50068531F /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4FF8A411FDED9B50068531F /* Map.storyboard */; };
 		A4FF8A441FDEDF200068531F /* FontAwesomeSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FF8A431FDEDF200068531F /* FontAwesomeSwift.framework */; };
 		A4FF8A451FDEDF2F0068531F /* FontAwesomeSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A4FF8A431FDEDF200068531F /* FontAwesomeSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -67,7 +66,6 @@
 				A46777AE1FDEBE9D00DB2D0F /* GoogleMapsCore.framework in CopyFiles */,
 				A40CC6BD1FDDC92900CF047C /* Squeal.framework in CopyFiles */,
 				A46777AC1FDEBE9700DB2D0F /* GoogleMaps.framework in CopyFiles */,
-				A46777AF1FDEBEA300DB2D0F /* GoogleMapsM4B.framework in CopyFiles */,
 				A46777AD1FDEBE9A00DB2D0F /* GoogleMapsBase.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +101,7 @@
 		A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Carthage/Build/iOS/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Carthage/Build/iOS/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = Carthage/Build/iOS/GoogleMapsM4B.framework; sourceTree = "<group>"; };
+		A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A4FF8A411FDED9B50068531F /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		A4FF8A431FDEDF200068531F /* FontAwesomeSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesomeSwift.framework; path = Carthage/Build/iOS/FontAwesomeSwift.framework; sourceTree = "<group>"; };
 		A4FF8A461FDEE0350068531F /* MapTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTabBarController.swift; sourceTree = "<group>"; };
@@ -114,7 +113,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4FF8A441FDEDF200068531F /* FontAwesomeSwift.framework in Frameworks */,
-				A46777AB1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework in Frameworks */,
 				A46777A91FDEBE6A00DB2D0F /* GoogleMapsCore.framework in Frameworks */,
 				A46777A71FDEBE5900DB2D0F /* GoogleMapsBase.framework in Frameworks */,
 				A46777A51FDEBE4700DB2D0F /* GoogleMaps.framework in Frameworks */,
@@ -235,6 +233,7 @@
 				93BC28F21FD555890034351D /* ConnexionViewController.swift */,
 				9322BCEB1FD97FC700DEF5D5 /* InscriptionViewController.swift */,
 				A4FF8A461FDEE0350068531F /* MapTabBarController.swift */,
+				A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -404,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A49A8F291FDFD13A0070D7A1 /* MapViewController.swift in Sources */,
 				93BC28FA1FD55F4A0034351D /* CryptoService.swift in Sources */,
 				73061EAD1FD1ACF10036F230 /* DatabaseService.swift in Sources */,
 				936D64231FD1868700FDA2E3 /* ViewController.swift in Sources */,
