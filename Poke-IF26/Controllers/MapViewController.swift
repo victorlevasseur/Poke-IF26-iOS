@@ -24,10 +24,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // For use in foreground
         self.locationManager.requestWhenInUseAuthorization()
         
-        if CLLocationManager.locationServicesEnabled() {
+        if CLLocationManager.locationServicesEnabled() && CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
+        } else {
+            let alertController = UIAlertController(title: "Erreur", message: "Veuillez autoriser l'application à accéder à votre position afin de capturer des pokémons puis redémarrez l'application.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
         }
     }
 
@@ -53,7 +57,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         self.userMarker?.position = locValue
         self.userMarker?.title = "Votre position"
         self.userMarker?.map = self.mapView
-        self.mapView?.animate(to: GMSCameraPosition.camera(withLatitude: locValue.latitude, longitude: locValue.longitude, zoom: 16.0))
+        self.mapView?.animate(to: GMSCameraPosition.camera(withLatitude: locValue.latitude, longitude: locValue.longitude, zoom: 18.0, bearing: CLLocationDirection(exactly: 0)!, viewingAngle: 45.00))
     }
 
     /*
