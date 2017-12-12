@@ -9,21 +9,26 @@
 import GoogleMaps
 import UIKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
+    
+    let locationManager = CLLocationManager()
+    
+    var mapView: GMSMapView? = nil
+    
+    var userMarker: GMSMarker? = nil;
     
     override func loadView() {
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
+        self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0))
+        view = self.mapView
         
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
     }
 
     override func viewDidLoad() {
@@ -37,6 +42,19 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue: CLLocationCoordinate2D = manager.location!.coordinate
+        
+        if self.userMarker != nil {
+            self.userMarker?.map = nil
+        }
+        
+        self.userMarker = GMSMarker()
+        self.userMarker?.position = locValue
+        self.userMarker?.title = "Votre position"
+        self.userMarker?.map = self.mapView
+        self.mapView?.animate(to: GMSCameraPosition.camera(withLatitude: locValue.latitude, longitude: locValue.longitude, zoom: 16.0))
+    }
 
     /*
     // MARK: - Navigation

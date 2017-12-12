@@ -102,6 +102,7 @@
 		A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Carthage/Build/iOS/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = Carthage/Build/iOS/GoogleMapsM4B.framework; sourceTree = "<group>"; };
 		A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A49A8F2A1FDFDC120070D7A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A4FF8A411FDED9B50068531F /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		A4FF8A431FDEDF200068531F /* FontAwesomeSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesomeSwift.framework; path = Carthage/Build/iOS/FontAwesomeSwift.framework; sourceTree = "<group>"; };
 		A4FF8A461FDEE0350068531F /* MapTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTabBarController.swift; sourceTree = "<group>"; };
@@ -140,6 +141,7 @@
 		73061E461FD1A1C80036F230 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A49A8F2A1FDFDC120070D7A1 /* CoreLocation.framework */,
 				A4FF8A431FDEDF200068531F /* FontAwesomeSwift.framework */,
 				A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */,
 				A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */,
