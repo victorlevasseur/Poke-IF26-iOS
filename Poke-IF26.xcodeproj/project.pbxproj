@@ -32,6 +32,9 @@
 		A46777AD1FDEBE9A00DB2D0F /* GoogleMapsBase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46777AE1FDEBE9D00DB2D0F /* GoogleMapsCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A49A8F291FDFD13A0070D7A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */; };
+		A4FDF1D11FE1849200D52EA7 /* PokedexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FDF1D01FE1849200D52EA7 /* PokedexTableViewController.swift */; };
+		A4FDF1D31FE186BA00D52EA7 /* PokemonDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FDF1D21FE186BA00D52EA7 /* PokemonDao.swift */; };
+		A4FDF1D51FE186E500D52EA7 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FDF1D41FE186E500D52EA7 /* Pokemon.swift */; };
 		A4FF8A421FDED9B50068531F /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4FF8A411FDED9B50068531F /* Map.storyboard */; };
 		A4FF8A441FDEDF200068531F /* FontAwesomeSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FF8A431FDEDF200068531F /* FontAwesomeSwift.framework */; };
 		A4FF8A451FDEDF2F0068531F /* FontAwesomeSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A4FF8A431FDEDF200068531F /* FontAwesomeSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -103,6 +106,9 @@
 		A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = Carthage/Build/iOS/GoogleMapsM4B.framework; sourceTree = "<group>"; };
 		A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A49A8F2A1FDFDC120070D7A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A4FDF1D01FE1849200D52EA7 /* PokedexTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTableViewController.swift; sourceTree = "<group>"; };
+		A4FDF1D21FE186BA00D52EA7 /* PokemonDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDao.swift; sourceTree = "<group>"; };
+		A4FDF1D41FE186E500D52EA7 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		A4FF8A411FDED9B50068531F /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		A4FF8A431FDEDF200068531F /* FontAwesomeSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesomeSwift.framework; path = Carthage/Build/iOS/FontAwesomeSwift.framework; sourceTree = "<group>"; };
 		A4FF8A461FDEE0350068531F /* MapTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTabBarController.swift; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				9336E2571FD9720200A78BE1 /* UserDao.swift */,
+				A4FDF1D21FE186BA00D52EA7 /* PokemonDao.swift */,
 			);
 			path = Daos;
 			sourceTree = "<group>";
@@ -236,6 +243,7 @@
 				9322BCEB1FD97FC700DEF5D5 /* InscriptionViewController.swift */,
 				A4FF8A461FDEE0350068531F /* MapTabBarController.swift */,
 				A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */,
+				A4FDF1D01FE1849200D52EA7 /* PokedexTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 			children = (
 				9336E2561FD971E200A78BE1 /* Daos */,
 				93BC28F71FD557EB0034351D /* User.swift */,
+				A4FDF1D41FE186E500D52EA7 /* Pokemon.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -405,14 +414,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FDF1D11FE1849200D52EA7 /* PokedexTableViewController.swift in Sources */,
 				A49A8F291FDFD13A0070D7A1 /* MapViewController.swift in Sources */,
 				93BC28FA1FD55F4A0034351D /* CryptoService.swift in Sources */,
 				73061EAD1FD1ACF10036F230 /* DatabaseService.swift in Sources */,
 				936D64231FD1868700FDA2E3 /* ViewController.swift in Sources */,
 				936D64211FD1868700FDA2E3 /* AppDelegate.swift in Sources */,
 				9336E2581FD9720200A78BE1 /* UserDao.swift in Sources */,
+				A4FDF1D51FE186E500D52EA7 /* Pokemon.swift in Sources */,
 				9322BCEC1FD97FC700DEF5D5 /* InscriptionViewController.swift in Sources */,
 				A4FF8A471FDEE0350068531F /* MapTabBarController.swift in Sources */,
+				A4FDF1D31FE186BA00D52EA7 /* PokemonDao.swift in Sources */,
 				93BC28F31FD555890034351D /* ConnexionViewController.swift in Sources */,
 				93BC28F51FD557A80034351D /* UserService.swift in Sources */,
 				93BC28F81FD557EB0034351D /* User.swift in Sources */,

@@ -12,7 +12,6 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
 
@@ -21,12 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let AppSchema = Schema(identifier:"users") { schema in
             // Version 1:
             schema.version(1) { v1 in
-                // Create a Table:
                 v1.createTable("users") { users in
                     users.primaryKey("id")
                     users.column("login", type:.Text, constraints:["NOT NULL"])
                     users.column("hash", type:.Text, constraints:["NOT NULL"])
                     users.column("salt", type:.Text, constraints:["NOT NULL"])
+                }
+            }
+            
+            // Version 2
+            schema.version(2) { v2 in
+                v2.createTable("pokemons") { pokemons in
+                    pokemons.primaryKey("id")
+                    pokemons.column("pokemon_id", type: .Integer, constraints: ["NOT NULL"])
+                    pokemons.column("captured_by_user", type: .Integer, constraints: [])
+                    pokemons.column("latitude", type: .Real, constraints: ["NOT NULL"])
+                    pokemons.column("longitude", type: .Real, constraints: ["NOT NULL"])
                 }
             }
         }

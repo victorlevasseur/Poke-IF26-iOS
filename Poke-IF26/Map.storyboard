@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="emz-US-NC0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="emz-US-NC0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pokédex-->
-        <scene sceneID="qGK-eq-bAm">
-            <objects>
-                <viewController id="3fW-i7-ULu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jjn-Si-MpU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="8fH-Do-yFZ"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Pokédex" id="aYq-Ad-bvy"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dzT-Ud-Sm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="649" y="-21"/>
-        </scene>
         <!--Mon compte-->
         <scene sceneID="lRx-hW-Kpt">
             <objects>
@@ -69,13 +53,42 @@
                     </tabBar>
                     <connections>
                         <segue destination="fBb-fW-EOv" kind="relationship" relationship="viewControllers" id="p4H-Fe-8Do"/>
-                        <segue destination="3fW-i7-ULu" kind="relationship" relationship="viewControllers" id="7dY-8x-uQN"/>
                         <segue destination="eRC-AA-Xtx" kind="relationship" relationship="viewControllers" id="qCN-cn-IgA"/>
+                        <segue destination="ebi-ef-HEz" kind="relationship" relationship="viewControllers" id="y6h-c4-zLI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKf-cE-XOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-303" y="-21"/>
+        </scene>
+        <!--Pokedex-->
+        <scene sceneID="DXY-eY-SB7">
+            <objects>
+                <tableViewController id="ebi-ef-HEz" customClass="PokedexTableViewController" customModule="Poke_IF26" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CBw-kc-2KY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7Mg-wB-ccb">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Mg-wB-ccb" id="3xO-ca-VOF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ebi-ef-HEz" id="Dna-A6-EYW"/>
+                            <outlet property="delegate" destination="ebi-ef-HEz" id="CFo-d4-1e1"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Pokedex" id="nz5-W9-rz9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkl-Ed-OOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="-61"/>
         </scene>
     </scenes>
 </document>
