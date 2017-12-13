@@ -38,6 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     pokemons.column("longitude", type: .Real, constraints: ["NOT NULL"])
                 }
             }
+            
+            // Version 3
+            schema.version(3) { v3 in
+                v3.alterTable("users") { users in
+                    users.alterColumn("login", renameTo: nil, changeTypeTo: nil, setConstraints: ["NOT NULL", "UNIQUE"])
+                }
+            }
         }
         
         let db = DatabaseService.getInstance().getDb();

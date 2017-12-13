@@ -10,7 +10,7 @@ import Foundation
 
 class UserService {
     
-    public func register(login: String, password: String) {
+    public func register(login: String, password: String) throws {
         let cryptoService = CryptoService();
         let userDao = UserDao();
 
@@ -24,14 +24,18 @@ class UserService {
             let _ = try userDao.create(user: user);
         } catch CryptoServiceError.prngFail {
             print("Failed to generate salt");
+            throw UserServiceError.registerFail
         } catch CryptoServiceError.derivationFail {
             print("PBKDF2 failed");
+            throw UserServiceError.registerFail
         }
         catch UserDaoError.insertFail {
             print("Failed to insert user");
+            throw UserServiceError.registerFail
         }
         catch {
             print("Erreur inconnue");
+            throw UserServiceError.registerFail
         }
     }
     
@@ -52,15 +56,17 @@ class UserService {
             stream.close();
 
             let hash = try cryptoService.deriveKeyFromPassword(password: password, salt: UnsafePointer<UInt8>(buffer))
-            if hash == user.hash {
-                return true;
-            }
+            return hash == user.hash
         } catch {
-            print("Erreur inconnue")
+            print("Erreur inconnue \(error)")
         }
         
         return false;
     }
+}
+
+enum UserServiceError: Error {
+    case registerFail
 }
 
 

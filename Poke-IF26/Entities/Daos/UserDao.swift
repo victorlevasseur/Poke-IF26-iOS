@@ -28,7 +28,6 @@ class UserDao {
     public func loadByLogin(login: String) throws -> User {
         do {
             let db = DatabaseService.getInstance().getDb();
-            //injection sql?
             let users = try db.selectFrom("users", whereExpr:"login == ?", parameters: [login], block: User.init)
             if (users.count != 1) {
                 throw UserDaoError.notFound

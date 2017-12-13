@@ -35,6 +35,13 @@ class InscriptionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func displayAlert(message: String) {
+        let alertController = UIAlertController(title: "Inscription", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+
+    }
 
     @IBAction func onRegisterClick(_ sender: Any) {
         let userService = UserService()
@@ -44,13 +51,16 @@ class InscriptionViewController: UIViewController {
         let passwordConfirm = passwordConfirmInput.text!
         
         if password != passwordConfirm {
-            let alertController = UIAlertController(title: "Inscription", message: "Mot de passe ne correspondent pas", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alertController, animated: true, completion: nil)
+            displayAlert(message: "Les messages ne correspondent pas")
             return
         }
         
-        userService.register(login: login, password: password)
+        do {
+            try userService.register(login: login, password: password)
+            displayAlert(message: "Inscription réussie")
+        } catch {
+            displayAlert(message: "Erreur lors de l'inscription")
+        }
     }
     
 }
