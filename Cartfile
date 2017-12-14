@@ -1,3 +1,4 @@
 github "nerdyc/Squeal"
 github "leoneparise/GoogleMaps-Carthage"
 github "Vaberer/Font-Awesome-Swift"
+github "theadam/SwiftClient"

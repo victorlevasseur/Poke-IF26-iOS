@@ -25,6 +25,9 @@
 		A40CC6B81FDDC4B000CF047C /* Squeal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40CC6B71FDDC4B000CF047C /* Squeal.framework */; };
 		A40CC6BB1FDDC62B00CF047C /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = A40CC6BA1FDDC62B00CF047C /* Cartfile.resolved */; };
 		A40CC6BD1FDDC92900CF047C /* Squeal.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A40CC6B71FDDC4B000CF047C /* Squeal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4628B2E1FE2B58900CE394A /* SwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4628B2D1FE2B58900CE394A /* SwiftClient.framework */; };
+		A4628B2F1FE2B59C00CE394A /* SwiftClient.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A4628B2D1FE2B58900CE394A /* SwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4628B311FE2B6C700CE394A /* HttpClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4628B301FE2B6C700CE394A /* HttpClientService.swift */; };
 		A46777A51FDEBE4700DB2D0F /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46777A41FDEBE4700DB2D0F /* GoogleMaps.framework */; };
 		A46777A71FDEBE5900DB2D0F /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */; };
 		A46777A91FDEBE6A00DB2D0F /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */; };
@@ -65,6 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A4628B2F1FE2B59C00CE394A /* SwiftClient.framework in CopyFiles */,
 				A4FF8A451FDEDF2F0068531F /* FontAwesomeSwift.framework in CopyFiles */,
 				A46777AE1FDEBE9D00DB2D0F /* GoogleMapsCore.framework in CopyFiles */,
 				A40CC6BD1FDDC92900CF047C /* Squeal.framework in CopyFiles */,
@@ -100,10 +104,11 @@
 		A40CC6B51FDDBF4400CF047C /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		A40CC6B71FDDC4B000CF047C /* Squeal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Squeal.framework; path = Carthage/Build/iOS/Squeal.framework; sourceTree = "<group>"; };
 		A40CC6BA1FDDC62B00CF047C /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		A4628B2D1FE2B58900CE394A /* SwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftClient.framework; path = Carthage/Build/iOS/SwiftClient.framework; sourceTree = "<group>"; };
+		A4628B301FE2B6C700CE394A /* HttpClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientService.swift; sourceTree = "<group>"; };
 		A46777A41FDEBE4700DB2D0F /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Carthage/Build/iOS/GoogleMaps.framework; sourceTree = "<group>"; };
 		A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Carthage/Build/iOS/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Carthage/Build/iOS/GoogleMapsCore.framework; sourceTree = "<group>"; };
-		A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = Carthage/Build/iOS/GoogleMapsM4B.framework; sourceTree = "<group>"; };
 		A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A49A8F2A1FDFDC120070D7A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A4FDF1D01FE1849200D52EA7 /* PokedexTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTableViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4628B2E1FE2B58900CE394A /* SwiftClient.framework in Frameworks */,
 				A4FF8A441FDEDF200068531F /* FontAwesomeSwift.framework in Frameworks */,
 				A46777A91FDEBE6A00DB2D0F /* GoogleMapsCore.framework in Frameworks */,
 				A46777A71FDEBE5900DB2D0F /* GoogleMapsBase.framework in Frameworks */,
@@ -147,9 +153,9 @@
 		73061E461FD1A1C80036F230 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4628B2D1FE2B58900CE394A /* SwiftClient.framework */,
 				A49A8F2A1FDFDC120070D7A1 /* CoreLocation.framework */,
 				A4FF8A431FDEDF200068531F /* FontAwesomeSwift.framework */,
-				A46777AA1FDEBE8D00DB2D0F /* GoogleMapsM4B.framework */,
 				A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */,
 				A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */,
 				A46777A41FDEBE4700DB2D0F /* GoogleMaps.framework */,
@@ -164,6 +170,7 @@
 				73061EAC1FD1ACF10036F230 /* DatabaseService.swift */,
 				93BC28F41FD557A80034351D /* UserService.swift */,
 				93BC28F91FD55F4A0034351D /* CryptoService.swift */,
+				A4628B301FE2B6C700CE394A /* HttpClientService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -425,6 +432,7 @@
 				9322BCEC1FD97FC700DEF5D5 /* InscriptionViewController.swift in Sources */,
 				A4FF8A471FDEE0350068531F /* MapTabBarController.swift in Sources */,
 				A4FDF1D31FE186BA00D52EA7 /* PokemonDao.swift in Sources */,
+				A4628B311FE2B6C700CE394A /* HttpClientService.swift in Sources */,
 				93BC28F31FD555890034351D /* ConnexionViewController.swift in Sources */,
 				93BC28F51FD557A80034351D /* UserService.swift in Sources */,
 				93BC28F81FD557EB0034351D /* User.swift in Sources */,

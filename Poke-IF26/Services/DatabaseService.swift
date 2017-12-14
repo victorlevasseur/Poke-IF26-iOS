@@ -15,7 +15,7 @@ class DatabaseService {
     
     private var db: Database
     
-    init() throws {
+    private init() throws {
         if let documentsPathURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let dbPath = documentsPathURL.appendingPathComponent("pokeif26.db")
             self.db = try Database(path: dbPath.absoluteString)
