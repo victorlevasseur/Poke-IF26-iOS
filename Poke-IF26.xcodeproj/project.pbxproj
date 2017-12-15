@@ -35,6 +35,10 @@
 		A46777AD1FDEBE9A00DB2D0F /* GoogleMapsBase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46777AE1FDEBE9D00DB2D0F /* GoogleMapsCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A49A8F291FDFD13A0070D7A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */; };
+		A4E178151FE4498900FE216B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E178141FE4498800FE216B /* RxSwift.framework */; };
+		A4E178171FE4499D00FE216B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E178161FE4499D00FE216B /* RxCocoa.framework */; };
+		A4E178181FE449AD00FE216B /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A4E178161FE4499D00FE216B /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4E178191FE449AD00FE216B /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A4E178141FE4498800FE216B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4FDF1D11FE1849200D52EA7 /* PokedexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FDF1D01FE1849200D52EA7 /* PokedexTableViewController.swift */; };
 		A4FDF1D31FE186BA00D52EA7 /* PokemonDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FDF1D21FE186BA00D52EA7 /* PokemonDao.swift */; };
 		A4FDF1D51FE186E500D52EA7 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FDF1D41FE186E500D52EA7 /* Pokemon.swift */; };
@@ -68,6 +72,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A4E178181FE449AD00FE216B /* RxCocoa.framework in CopyFiles */,
+				A4E178191FE449AD00FE216B /* RxSwift.framework in CopyFiles */,
 				A4628B2F1FE2B59C00CE394A /* SwiftClient.framework in CopyFiles */,
 				A4FF8A451FDEDF2F0068531F /* FontAwesomeSwift.framework in CopyFiles */,
 				A46777AE1FDEBE9D00DB2D0F /* GoogleMapsCore.framework in CopyFiles */,
@@ -111,6 +117,8 @@
 		A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Carthage/Build/iOS/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A49A8F2A1FDFDC120070D7A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A4E178141FE4498800FE216B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		A4E178161FE4499D00FE216B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		A4FDF1D01FE1849200D52EA7 /* PokedexTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTableViewController.swift; sourceTree = "<group>"; };
 		A4FDF1D21FE186BA00D52EA7 /* PokemonDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDao.swift; sourceTree = "<group>"; };
 		A4FDF1D41FE186E500D52EA7 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
@@ -124,6 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4E178171FE4499D00FE216B /* RxCocoa.framework in Frameworks */,
+				A4E178151FE4498900FE216B /* RxSwift.framework in Frameworks */,
 				A4628B2E1FE2B58900CE394A /* SwiftClient.framework in Frameworks */,
 				A4FF8A441FDEDF200068531F /* FontAwesomeSwift.framework in Frameworks */,
 				A46777A91FDEBE6A00DB2D0F /* GoogleMapsCore.framework in Frameworks */,
@@ -153,6 +163,8 @@
 		73061E461FD1A1C80036F230 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4E178161FE4499D00FE216B /* RxCocoa.framework */,
+				A4E178141FE4498800FE216B /* RxSwift.framework */,
 				A4628B2D1FE2B58900CE394A /* SwiftClient.framework */,
 				A49A8F2A1FDFDC120070D7A1 /* CoreLocation.framework */,
 				A4FF8A431FDEDF200068531F /* FontAwesomeSwift.framework */,
