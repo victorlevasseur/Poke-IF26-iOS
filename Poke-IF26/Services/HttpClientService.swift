@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import RxCocoa
+import RxSwift
 import SwiftClient
 
 class HttpClientService {
@@ -23,10 +25,42 @@ class HttpClientService {
         return self.client
     }
     
+    public func get(path: String) -> Single<Any> {
+        return Single.create { single in
+            self.client.get(url: path)
+                .end(done: { response in
+                    if response.basicStatus == .ok {
+                        do {
+                            guard let responseData = response.data else {
+                                single(.error(HttpError.jsonError))
+                                return
+                            }
+                            let json = try JSONSerialization.jsonObject(with: responseData)
+                            single(.success(json))
+                        } catch {
+                            single(.error(HttpError.jsonError))
+                        }
+                    } else {
+                        single(.error(HttpError.responseError(status: response.basicStatus)))
+                    }
+                }, onError: { error in
+                    single(.error(HttpError.unknownError))
+                })
+            
+            return Disposables.create()
+        }
+    }
+    
     static func getInstance() -> HttpClientService {
         if instance == nil {
             instance = HttpClientService()
         }
         return instance!
     }
+}
+
+enum HttpError: Error {
+    case unknownError
+    case responseError(status: Response.BasicResponseType)
+    case jsonError
 }

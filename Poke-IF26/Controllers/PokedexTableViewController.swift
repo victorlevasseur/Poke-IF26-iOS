@@ -46,8 +46,7 @@ class PokedexTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "pokemonCell", for: indexPath)
         
         let id = indexPath.row;
-        let req = URLRequest(url: URL(string: "http://pokeapi.co/api/v2/pokemon/\(ownedPokemons[id])")!)
-        cell.textLabel?.text = "\(ownedPokemons[id])"
+        let req = URLRequest(url: URL(string: "https://pokeapi.co/api/v2/pokemon/\(ownedPokemons[id])")!)
         let responseJSON = URLSession.shared.rx.json(request: req)
         
         let cancelRequest = responseJSON.subscribe(onNext: { json in
