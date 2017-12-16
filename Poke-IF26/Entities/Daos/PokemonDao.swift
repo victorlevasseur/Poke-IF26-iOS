@@ -12,7 +12,7 @@ class PokemonDao {
     public func getNotCapturedPokemons() throws -> [Pokemon] {
         do {
             let db = DatabaseService.getInstance().getDb();
-            return try db.selectFrom("pokemons", whereExpr: "captured_by_user == ?", parameters: [nil], block: Pokemon.init)
+            return try db.selectFrom("pokemons", whereExpr: "captured_by_user IS NULL", parameters: [], block: Pokemon.init)
         } catch {
             throw PokemonDaoError.selectFail
         }
@@ -21,7 +21,7 @@ class PokemonDao {
     public func getPokemonsCapturedByUser(user: User) throws -> [Pokemon] {
         do {
             let db = DatabaseService.getInstance().getDb();
-            return try db.selectFrom("pokemons", whereExpr: "captured_by_user == ?", parameters: [user.id], block: Pokemon.init)
+            return try db.selectFrom("pokemons", whereExpr: "captured_by_user = ?", parameters: [user.id], block: Pokemon.init)
         } catch {
             throw PokemonDaoError.selectFail
         }
