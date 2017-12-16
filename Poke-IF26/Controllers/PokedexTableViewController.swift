@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class PokedexTableViewController: UITableViewController {
 
+    //TODO : get this from PokemonDao
+    let ownedPokemons = [1, 25, 30];
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,14 +39,25 @@ class PokedexTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return ownedPokemons.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pokemonCell", for: indexPath)
+        
+        let id = indexPath.row;
+        let req = URLRequest(url: URL(string: "http://pokeapi.co/api/v2/pokemon/\(ownedPokemons[id])")!)
+        cell.textLabel?.text = "\(ownedPokemons[id])"
+        let responseJSON = URLSession.shared.rx.json(request: req)
+        
+        let cancelRequest = responseJSON.subscribe(onNext: { json in
+            print(json)
+        })
+        
+        //timeout
+        Thread.sleep(forTimeInterval: 3.0)
+        cancelRequest.dispose()
+        
         return cell
     }
 
