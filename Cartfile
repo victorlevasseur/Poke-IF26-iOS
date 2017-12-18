@@ -3,3 +3,4 @@ github "leoneparise/GoogleMaps-Carthage"
 github "Vaberer/Font-Awesome-Swift"
 github "theadam/SwiftClient"
 github "ReactiveX/RxSwift" ~> 4.0
+github "Alamofire/Alamofire"

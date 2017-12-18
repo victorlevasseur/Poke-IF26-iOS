@@ -17,7 +17,7 @@ class PokedexTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,19 +43,21 @@ class PokedexTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let httpClientService = HttpClientService.getInstance()
         let cell = tableView.dequeueReusableCell(withIdentifier: "pokemonCell", for: indexPath)
         
         let id = indexPath.row;
-        let req = URLRequest(url: URL(string: "https://pokeapi.co/api/v2/pokemon/\(ownedPokemons[id])")!)
-        let responseJSON = URLSession.shared.rx.json(request: req)
-        
-        let cancelRequest = responseJSON.subscribe(onNext: { json in
-            print(json)
-        })
-        
-        //timeout
-        Thread.sleep(forTimeInterval: 3.0)
-        cancelRequest.dispose()
+        let _ = httpClientService.get(path: "https://pokeapi.co/api/v2/pokemon/\(ownedPokemons[id])")
+            .observeOn(MainScheduler.instance)
+            .subscribe { event in
+                switch event {
+                    case .success(let pokemon):
+                        let name = pokemon["name"] as? String
+                        cell.textLabel!.text = name
+                    case .error(let error):
+                        print("\(error)")
+                }
+            }
         
         return cell
     }

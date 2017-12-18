@@ -25,7 +25,7 @@ class HttpClientService {
         return self.client
     }
     
-    public func get(path: String) -> Single<Any> {
+    public func get(path: String) -> Single<[String:AnyObject]> {
         return Single.create { single in
             self.client.get(url: path)
                 .end(done: { response in
@@ -35,7 +35,7 @@ class HttpClientService {
                                 single(.error(HttpError.jsonError))
                                 return
                             }
-                            let json = try JSONSerialization.jsonObject(with: responseData)
+                            let json = try JSONSerialization.jsonObject(with: responseData) as! [String:AnyObject]
                             single(.success(json))
                         } catch {
                             single(.error(HttpError.jsonError))
