@@ -36,21 +36,21 @@ class ConnexionViewController: UIViewController {
     */
     
     @IBAction func onConnectClick(_ sender: Any) {
-        let userService = UserService();
+        let userService = UserService.getInstance();
         
         let login = loginInput.text!;
         let password = passwordInput.text!;
         
-        let result = userService.login(login: login, password: password)
-        
-        if (!result) {
-            let alertController = UIAlertController(title: "Connexion", message: "Mauvais mot de passe", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-        } else {
+        do {
+            let _ = try userService.login(login: login, password: password)
+            
             let mapStoryboard = UIStoryboard(name: "Map", bundle: nil)
             let controller = mapStoryboard.instantiateInitialViewController();
             present(controller!, animated: true, completion: nil)
+        } catch {
+            let alertController = UIAlertController(title: "Connexion", message: "Mauvais mot de passe", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     

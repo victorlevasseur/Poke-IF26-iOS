@@ -10,6 +10,23 @@ import Foundation
 
 class UserService {
     
+    private static var instance: UserService? = nil
+    
+    private var currentUser: User? = nil
+    
+    private init() {
+        
+    }
+    
+    public static func getInstance() -> UserService {
+        guard let userService = instance else {
+            let newInstance = UserService()
+            instance = newInstance
+            return newInstance
+        }
+        return userService
+    }
+    
     public func register(login: String, password: String) throws {
         let cryptoService = CryptoService();
         let userDao = UserDao();
@@ -39,7 +56,11 @@ class UserService {
         }
     }
     
-    public func login(login: String, password: String) -> Bool {
+    public func login(login: String, password: String) throws -> User {
+        if self.currentUser != nil {
+            throw UserServiceError.alreadyLoggedIn
+        }
+        
         let cryptoService = CryptoService();
         let userDao = UserDao();
         
@@ -56,17 +77,23 @@ class UserService {
             stream.close();
 
             let hash = try cryptoService.deriveKeyFromPassword(password: password, salt: UnsafePointer<UInt8>(buffer))
-            return hash == user.hash
+            if hash == user.hash {
+                return user
+            } else {
+                throw UserServiceError.invalidCredentials
+            }
         } catch {
-            print("Erreur inconnue \(error)")
+            throw UserServiceError.invalidCredentials
         }
-        
-        return false;
+    }
+    
+    public func getConnectedUser() -> User? {
+        return self.currentUser
     }
 }
 
 enum UserServiceError: Error {
     case registerFail
+    case invalidCredentials
+    case alreadyLoggedIn
 }
-
-

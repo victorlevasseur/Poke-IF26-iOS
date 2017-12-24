@@ -44,7 +44,7 @@ class InscriptionViewController: UIViewController {
     }
 
     @IBAction func onRegisterClick(_ sender: Any) {
-        let userService = UserService()
+        let userService = UserService.getInstance()
         
         let login = loginInput.text!
         let password = passwordInput.text!
