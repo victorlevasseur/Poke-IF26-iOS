@@ -18,7 +18,7 @@ class UserDao {
                     "login": user.login,
                     "hash": user.hash,
                     "salt": user.salt,
-                    ]
+                ]
             )
         } catch {
             throw UserDaoError.insertFail

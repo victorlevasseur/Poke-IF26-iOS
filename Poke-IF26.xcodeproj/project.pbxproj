@@ -35,6 +35,7 @@
 		A46777AD1FDEBE9A00DB2D0F /* GoogleMapsBase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46777AE1FDEBE9D00DB2D0F /* GoogleMapsCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4794C4F1FF110880029B2F4 /* FetchedPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4794C4E1FF110880029B2F4 /* FetchedPokemon.swift */; };
+		A4794C511FF119810029B2F4 /* PokemonsInitializerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4794C501FF119810029B2F4 /* PokemonsInitializerService.swift */; };
 		A49A8F291FDFD13A0070D7A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */; };
 		A4E178151FE4498900FE216B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E178141FE4498800FE216B /* RxSwift.framework */; };
 		A4E178171FE4499D00FE216B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E178161FE4499D00FE216B /* RxCocoa.framework */; };
@@ -117,6 +118,7 @@
 		A46777A61FDEBE5900DB2D0F /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Carthage/Build/iOS/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		A46777A81FDEBE6A00DB2D0F /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Carthage/Build/iOS/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		A4794C4E1FF110880029B2F4 /* FetchedPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedPokemon.swift; sourceTree = "<group>"; };
+		A4794C501FF119810029B2F4 /* PokemonsInitializerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsInitializerService.swift; sourceTree = "<group>"; };
 		A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A49A8F2A1FDFDC120070D7A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A4E178141FE4498800FE216B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				93BC28F41FD557A80034351D /* UserService.swift */,
 				93BC28F91FD55F4A0034351D /* CryptoService.swift */,
 				A4628B301FE2B6C700CE394A /* HttpClientService.swift */,
+				A4794C501FF119810029B2F4 /* PokemonsInitializerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				A4794C4F1FF110880029B2F4 /* FetchedPokemon.swift in Sources */,
 				A4628B311FE2B6C700CE394A /* HttpClientService.swift in Sources */,
 				93BC28F31FD555890034351D /* ConnexionViewController.swift in Sources */,
+				A4794C511FF119810029B2F4 /* PokemonsInitializerService.swift in Sources */,
 				93BC28F51FD557A80034351D /* UserService.swift in Sources */,
 				93BC28F81FD557EB0034351D /* User.swift in Sources */,
 			);

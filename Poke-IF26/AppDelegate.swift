@@ -45,6 +45,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     users.alterColumn("login", renameTo: nil, changeTypeTo: nil, setConstraints: ["NOT NULL", "UNIQUE"])
                 }
             }
+            
+            // Version 4
+            schema.version(4) { v4 in
+                v4.alterTable("pokemons") { pokemons in
+                    pokemons.addConstraint("UNIQUE(latitude, longitude)")
+                }
+            }
+            
+            // Version 5
+            schema.version(5) { v5 in
+                v5.alterTable("pokemons") { pokemons in
+                    pokemons.addColumn("capturability", type: .Real, constraints: ["NOT NULL"], initialExpr: "1")
+                }
+            }
         }
         
         let db = DatabaseService.getInstance().getDb();
@@ -53,10 +67,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             let _ = try AppSchema.migrate(db)
         } catch {
-            print("Failed migration")
+            fatalError("Failed migration")
         }
         
+        // Provide the API key to the Google Maps Services.
         GMSServices.provideAPIKey("AIzaSyC9_jPwnxWV3zrbRfauyE2jw7ooZPTNJhU")
+        
+        // Initialize the pokemons.
+        PokemonsInitializerService.getInstance().initializePokemons()
         
         return true
     }
