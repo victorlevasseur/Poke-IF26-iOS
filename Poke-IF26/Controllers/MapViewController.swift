@@ -43,6 +43,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
 
         // Create a marker and a circle for each pokemon.
+        // TODO: Move to viewWillAppear and clean the data in viewDidDisappear so that it reloaded when the tab changes
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let _ = PokemonsService.getInstance().fetchNotCapturedPokemons()
             .observeOn(MainScheduler.instance)

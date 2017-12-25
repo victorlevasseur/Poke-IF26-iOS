@@ -29,6 +29,11 @@ class PokedexTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // Reload the pokemons when the tab controller is switched to this view.
+        self.tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
