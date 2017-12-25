@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ * Service managing users and the connected user.
+ */
 class UserService {
     
     private static var instance: UserService? = nil
@@ -27,6 +30,9 @@ class UserService {
         return userService
     }
     
+    /**
+     * Register an user.
+     */
     public func register(login: String, password: String) throws {
         let cryptoService = CryptoService();
         let userDao = UserDao();
@@ -56,6 +62,12 @@ class UserService {
         }
     }
     
+    /**
+     * Attempt a login with the login and password pair.
+     * @return the connected user.
+     * throws UserServiceError.alreadyLoggedIn if an user is already logged in.
+     * throws UserServiceError.invalidCredentials if the user credentials are invalid.
+     */
     public func login(login: String, password: String) throws -> User {
         if self.currentUser != nil {
             throw UserServiceError.alreadyLoggedIn
@@ -87,6 +99,20 @@ class UserService {
         }
     }
     
+    /**
+     * Log out.
+     * throws UserServiceError.notLoggedIn if no users were connected
+     */
+    public func logout() throws {
+        if self.currentUser == nil {
+            throw UserServiceError.notLoggedIn
+        }
+        self.currentUser = nil
+    }
+    
+    /**
+     * Get the connected user.
+     */
     public func getConnectedUser() -> User? {
         return self.currentUser
     }
@@ -96,4 +122,5 @@ enum UserServiceError: Error {
     case registerFail
     case invalidCredentials
     case alreadyLoggedIn
+    case notLoggedIn
 }

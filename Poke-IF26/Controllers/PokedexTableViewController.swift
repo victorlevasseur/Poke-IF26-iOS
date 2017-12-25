@@ -45,6 +45,8 @@ class PokedexTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let httpClientService = HttpClientService.getInstance()
         let cell = tableView.dequeueReusableCell(withIdentifier: "pokemonCell", for: indexPath)
+        cell.textLabel!.text = "Chargement..."
+        cell.detailTextLabel?.text = ""
         
         let id = indexPath.row;
         let _ = httpClientService.get(path: "https://pokeapi.co/api/v2/pokemon/\(ownedPokemons[id])")
