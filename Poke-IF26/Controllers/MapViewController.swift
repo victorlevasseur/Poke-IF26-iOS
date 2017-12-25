@@ -7,6 +7,8 @@
 //
 
 import GoogleMaps
+import RxCocoa
+import RxSwift
 import UIKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
@@ -16,6 +18,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var mapView: GMSMapView? = nil
     
     var userMarker: GMSMarker? = nil;
+    
+    var pokemonsMarkers: [(marker: GMSMarker, circle: GMSCircle)] = []
     
     override func loadView() {
         self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0))
@@ -38,7 +42,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Create a marker and a circle for each pokemon.
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        let _ = PokemonsService.getInstance().fetchNotCapturedPokemons()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onSuccess: { (pokemons) in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                // Add the markers
+                pokemons.forEach({ (pokemon) in
+                    let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: pokemon.pokemon.latitude, longitude: pokemon.pokemon.longitude))
+                    marker.title = pokemon.pokemonName
+                    marker.icon = pokemon.pokemonBitmap
+                    marker.map = self.mapView
+                })
+            }) { (err) in
+                let alertController = UIAlertController(title: "Erreur", message: "Impossible de charger les pokémons !", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
     }
 
     override func didReceiveMemoryWarning() {

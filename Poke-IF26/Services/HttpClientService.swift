@@ -14,7 +14,6 @@ import UIKit
 
 class HttpClientService {
     private let client: Client = Client()
-        .baseUrl(url: "http://pokeapi.co/api/v2")
     
     static private var instance: HttpClientService? = nil
     
@@ -50,23 +49,34 @@ class HttpClientService {
     
     public func getRaw(path: String) -> Single<Data> {
         return Single.create { single in
-            self.client.get(url: path)
-                .end(done: { response in
-                    if response.basicStatus == .ok {
-                        guard let responseData = response.data else {
-                            single(.error(HttpError.noDataError))
-                            return
-                        }
-                        single(.success(responseData))
-                    } else {
-                        single(.error(HttpError.responseError(status: response.basicStatus)))
-                    }
-                }, onError: { error in
-                    single(.error(HttpError.unknownError))
-                })
+            let task = URLSession.shared.dataTask(with: URL(string: path)!) { data, response, error in
+                if let error = error {
+                    single(.error(error))
+                    return
+                }
+                
+                guard let response = response, let httpResponse = response as? HTTPURLResponse else {
+                    single(.error(HttpError.notHTTP))
+                    return
+                }
+                
+                if httpResponse.statusCode != 200 {
+                    single(.error(HttpError.responseError(status: httpResponse.statusCode)))
+                    return
+                }
+                
+                guard let data = data else {
+                    single(.error(HttpError.noDataError))
+                    return
+                }
+                
+                single(.success(data))
+            }
             
-            return Disposables.create()
-        }
+            task.resume()
+            
+            return Disposables.create { task.cancel() }
+        }.observeOn(MainScheduler.instance)
     }
     
     static func getInstance() -> HttpClientService {
@@ -79,7 +89,8 @@ class HttpClientService {
 
 enum HttpError: Error {
     case unknownError
-    case responseError(status: Response.BasicResponseType)
+    case responseError(status: Int)
+    case notHTTP
     case noDataError
     case jsonError
     case imageError

@@ -12,6 +12,7 @@ import UIKit
 class FetchedPokemon {
     private var _pokemonName: String
     private var _pokemonBitmap: UIImage
+    private var _pokemon: Pokemon
     
     public var pokemonName: String {
         get {
@@ -25,7 +26,14 @@ class FetchedPokemon {
         }
     }
     
-    public init(pokemonName: String, pokemonBitmap: UIImage) {
+    public var pokemon: Pokemon {
+        get {
+            return self._pokemon
+        }
+    }
+    
+    public init(pokemon: Pokemon, pokemonName: String, pokemonBitmap: UIImage) {
+        self._pokemon = pokemon
         self._pokemonName = pokemonName
         self._pokemonBitmap = pokemonBitmap
     }

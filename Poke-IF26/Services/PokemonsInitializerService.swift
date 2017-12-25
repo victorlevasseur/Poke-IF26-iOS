@@ -13,7 +13,7 @@ class PokemonsInitializerService {
     
     private static var instance: PokemonsInitializerService? = nil
     
-    private static var initialPokemons: [Pokemon] = [
+    private static let initialPokemons: [Pokemon] = [
         Pokemon(pokemonId: 2, latitude: 48.269042, longitude: 4.066038, capturability: 0.9),
         Pokemon(pokemonId: 6, latitude: 48.269301, longitude: 4.065839, capturability: 0.7),
         Pokemon(pokemonId: 14, latitude: 48.269502, longitude: 4.066899, capturability: 0.4),
