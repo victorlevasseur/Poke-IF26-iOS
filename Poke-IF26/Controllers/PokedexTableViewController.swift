@@ -49,7 +49,7 @@ class PokedexTableViewController: UITableViewController {
         cell.detailTextLabel?.text = ""
         
         let id = indexPath.row;
-        let _ = httpClientService.get(path: "https://pokeapi.co/api/v2/pokemon/\(ownedPokemons[id])")
+        let _ = httpClientService.getJson(path: "https://pokeapi.co/api/v2/pokemon/\(ownedPokemons[id])")
             .observeOn(MainScheduler.instance)
             .subscribe { event in
                 switch event {
