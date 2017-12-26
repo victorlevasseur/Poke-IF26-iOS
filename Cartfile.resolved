@@ -1,5 +1,6 @@
+github "Alamofire/Alamofire" "4.6.0"
 github "ReactiveX/RxSwift" "4.0.0"
 github "Vaberer/Font-Awesome-Swift" "1.7.2"
 github "leoneparise/GoogleMaps-Carthage" "2.4.0"
 github "nerdyc/Squeal" "v1.2.0"
-github "theadam/SwiftClient" "3.0.3"
+github "victorlevasseur/SwiftClient" "3.0.3"

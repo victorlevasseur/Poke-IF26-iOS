@@ -24,6 +24,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func loadView() {
         self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0))
         view = self.mapView
+        self.mapView?.isTrafficEnabled = false
+        self.mapView?.isUserInteractionEnabled = false
+        self.mapView?.isTrafficEnabled = false
         
         // For use in foreground
         self.locationManager.requestWhenInUseAuthorization()
@@ -41,9 +44,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Triggerred when the tab is switched to the map
+        // Recreate the pokemon markers. Doing it at each appearance allows to stay updated after a captured pokemon.
+        
         // Create a marker and a circle for each pokemon.
-        // TODO: Move to viewWillAppear and clean the data in viewDidDisappear so that it reloaded when the tab changes
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let _ = PokemonsService.getInstance().fetchNotCapturedPokemons()
             .observeOn(MainScheduler.instance)
@@ -55,12 +63,30 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                     marker.title = pokemon.pokemonName
                     marker.icon = pokemon.pokemonBitmap
                     marker.map = self.mapView
+                    
+                    let circle = GMSCircle(position: CLLocationCoordinate2D(latitude: pokemon.pokemon.latitude, longitude: pokemon.pokemon.longitude), radius: 10)
+                    circle.fillColor = UIColor(red: 0, green: 0.4, blue: 1, alpha: 0.5)
+                    circle.strokeWidth = 0
+                    circle.map = self.mapView
+                    
+                    self.pokemonsMarkers.append((marker: marker, circle: circle))
                 })
             }) { (err) in
                 let alertController = UIAlertController(title: "Erreur", message: "Impossible de charger les pokémons !", preferredStyle: UIAlertControllerStyle.alert)
                 alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
-            }
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        // Clear the markers
+        self.pokemonsMarkers.forEach { (marker, circle) in
+            marker.map = nil
+            circle.map = nil
+        }
+        self.pokemonsMarkers.removeAll()
     }
 
     override func didReceiveMemoryWarning() {
