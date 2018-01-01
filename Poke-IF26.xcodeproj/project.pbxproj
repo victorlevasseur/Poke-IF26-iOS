@@ -24,6 +24,7 @@
 		A40CC6B61FDDBF4400CF047C /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = A40CC6B51FDDBF4400CF047C /* Cartfile */; };
 		A40CC6B81FDDC4B000CF047C /* Squeal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40CC6B71FDDC4B000CF047C /* Squeal.framework */; };
 		A40CC6BD1FDDC92900CF047C /* Squeal.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A40CC6B71FDDC4B000CF047C /* Squeal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A42E29AD1FFA933100C1EC38 /* EncounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E29AC1FFA933100C1EC38 /* EncounterViewController.swift */; };
 		A45B4B6F1FF13C10006C0A88 /* PokemonsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B4B6E1FF13C10006C0A88 /* PokemonsService.swift */; };
 		A4628B2E1FE2B58900CE394A /* SwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4628B2D1FE2B58900CE394A /* SwiftClient.framework */; };
 		A4628B2F1FE2B59C00CE394A /* SwiftClient.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A4628B2D1FE2B58900CE394A /* SwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -111,6 +112,7 @@
 		93BC28F91FD55F4A0034351D /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
 		A40CC6B51FDDBF4400CF047C /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		A40CC6B71FDDC4B000CF047C /* Squeal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Squeal.framework; path = Carthage/Build/iOS/Squeal.framework; sourceTree = "<group>"; };
+		A42E29AC1FFA933100C1EC38 /* EncounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterViewController.swift; sourceTree = "<group>"; };
 		A45B4B6E1FF13C10006C0A88 /* PokemonsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsService.swift; sourceTree = "<group>"; };
 		A4628B2D1FE2B58900CE394A /* SwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftClient.framework; path = Carthage/Build/iOS/SwiftClient.framework; sourceTree = "<group>"; };
 		A4628B301FE2B6C700CE394A /* HttpClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientService.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				A4FF8A461FDEE0350068531F /* MapTabBarController.swift */,
 				A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */,
 				A4FDF1D01FE1849200D52EA7 /* PokedexTableViewController.swift */,
+				A42E29AC1FFA933100C1EC38 /* EncounterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4FDF1D11FE1849200D52EA7 /* PokedexTableViewController.swift in Sources */,
+				A42E29AD1FFA933100C1EC38 /* EncounterViewController.swift in Sources */,
 				A49A8F291FDFD13A0070D7A1 /* MapViewController.swift in Sources */,
 				93BC28FA1FD55F4A0034351D /* CryptoService.swift in Sources */,
 				73061EAD1FD1ACF10036F230 /* DatabaseService.swift in Sources */,

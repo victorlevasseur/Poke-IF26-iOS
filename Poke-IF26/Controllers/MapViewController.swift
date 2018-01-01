@@ -28,13 +28,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         self.mapView?.isUserInteractionEnabled = false
         self.mapView?.isTrafficEnabled = false
         
-        // For use in foreground
+        // Ask for the location permission and setup the location services.
         self.locationManager.requestWhenInUseAuthorization()
-        
         if CLLocationManager.locationServicesEnabled() && CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
         } else {
             let alertController = UIAlertController(title: "Erreur", message: "Veuillez autoriser l'application à accéder à votre position afin de capturer des pokémons puis redémarrez l'application.", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
@@ -49,6 +47,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Triggerred when the tab is switched to the map
+        
         // Recreate the pokemon markers. Doing it at each appearance allows to stay updated after a captured pokemon.
         
         // Create a marker and a circle for each pokemon.
@@ -78,6 +77,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // After the view has appeared, start getting location updates.
+        if CLLocationManager.locationServicesEnabled() && CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Stop position refreshing
+        if CLLocationManager.locationServicesEnabled() && CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse {
+            locationManager.stopUpdatingLocation()
+        }
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
@@ -96,16 +113,36 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue: CLLocationCoordinate2D = manager.location!.coordinate
+        let userLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
         
+        // Delete the previous marker.
         if self.userMarker != nil {
             self.userMarker?.map = nil
         }
         
+        // Setup the new user marker.
         self.userMarker = GMSMarker()
         self.userMarker?.position = locValue
         self.userMarker?.title = "Votre position"
         self.userMarker?.map = self.mapView
         self.mapView?.animate(to: GMSCameraPosition.camera(withLatitude: locValue.latitude, longitude: locValue.longitude, zoom: 18.0, bearing: CLLocationDirection(exactly: 0)!, viewingAngle: 45.00))
+        
+        // Detect if a pokemon is encountered.
+        guard let storyboard = self.storyboard, let navigationController = self.navigationController else {
+            return
+        }
+        // Only try to detect encounters when this is the active view.
+        if navigationController.topViewController == self {
+            PokemonsService.getInstance().getNotCapturedPokemons().forEach { (pokemon) in
+                let pokemonLocation = CLLocation(latitude: pokemon.latitude, longitude: pokemon.longitude)
+                if pokemonLocation.distance(from: userLocation) <= 10 {
+                    // The user encounters a pokemon, navigate to the encounter view.
+                    let encounterViewController = storyboard.instantiateViewController(withIdentifier: "encounter") as! EncounterViewController
+                    encounterViewController.pokemon = pokemon
+                    navigationController.pushViewController(encounterViewController, animated: true)
+                }
+            }
+        }
     }
 
     /*
