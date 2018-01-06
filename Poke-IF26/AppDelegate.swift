@@ -75,7 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Initialize the pokemons.
         PokemonsInitializerService.getInstance().initializePokemons()
-        
+			
         return true
     }
 

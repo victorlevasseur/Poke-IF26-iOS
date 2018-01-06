@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var currentUser : User? = nil;
+
 class FetchedPokemon {
     private var _pokemonName: String
     private var _pokemonBitmap: UIImage

@@ -47,4 +47,24 @@ class EncounterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onCaptureClick(_ sender: Any) {
+        let pokemonDao = PokemonDao();
+        do {
+            try pokemonDao.capture(user: currentUser!, pokemon: self.pokemon!)
+        } catch {
+            let alertController = UIAlertController(title: "Capture", message: "Impossible de mettre à jour le pokédex", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+        let alertController = UIAlertController(title: "Capture", message: "La capture est un succès", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+        
+        let mapStoryboard = UIStoryboard(name: "Map", bundle: nil)
+        let controller = mapStoryboard.instantiateInitialViewController();
+        present(controller!, animated: true, completion: nil)
+
+    }
+    
 }

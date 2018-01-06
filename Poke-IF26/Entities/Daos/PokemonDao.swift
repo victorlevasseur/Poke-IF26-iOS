@@ -27,6 +27,20 @@ class PokemonDao {
         }
     }
     
+    public func capture(user: User, pokemon: Pokemon) throws {
+        do {
+            let db = DatabaseService.getInstance().getDb();
+            try db.update(
+                "pokemons",
+                setExpr: "captured_by_user = ?",
+                whereExpr: "id = ?",
+                parameters: [user.id, pokemon.id]
+            )
+        } catch {
+            throw PokemonDaoError.updateFail
+        }
+    }
+    
     public func deleteNotCapturedPokemons() {
         let db = DatabaseService.getInstance().getDb()
         try! db.deleteFrom("pokemons", whereExpr: "captured_by_user IS NULL", parameters: [])
@@ -54,4 +68,5 @@ class PokemonDao {
 enum PokemonDaoError: Error {
     case insertFail
     case selectFail
+    case updateFail
 }

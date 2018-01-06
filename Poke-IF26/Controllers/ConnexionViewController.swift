@@ -42,7 +42,7 @@ class ConnexionViewController: UIViewController {
         let password = passwordInput.text!;
         
         do {
-            let _ = try userService.login(login: login, password: password)
+            currentUser = try userService.login(login: login, password: password)
             
             let mapStoryboard = UIStoryboard(name: "Map", bundle: nil)
             let controller = mapStoryboard.instantiateInitialViewController();

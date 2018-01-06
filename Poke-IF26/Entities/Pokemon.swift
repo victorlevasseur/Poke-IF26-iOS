@@ -15,7 +15,7 @@ import Squeal
 struct Pokemon {
     let id: Int64?
     let pokemonId: Int64
-    let capturedByUserId: Int64?
+    var capturedByUserId: Int64?
     let latitude: Double
     let longitude: Double
     let capturability: Double

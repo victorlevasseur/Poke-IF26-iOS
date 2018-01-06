@@ -14,9 +14,7 @@ import Foundation
 class UserService {
     
     private static var instance: UserService? = nil
-    
-    private var currentUser: User? = nil
-    
+        
     private init() {
         
     }
@@ -69,7 +67,7 @@ class UserService {
      * throws UserServiceError.invalidCredentials if the user credentials are invalid.
      */
     public func login(login: String, password: String) throws -> User {
-        if self.currentUser != nil {
+        if currentUser != nil {
             throw UserServiceError.alreadyLoggedIn
         }
         
@@ -104,19 +102,12 @@ class UserService {
      * throws UserServiceError.notLoggedIn if no users were connected
      */
     public func logout() throws {
-        if self.currentUser == nil {
+        if currentUser == nil {
             throw UserServiceError.notLoggedIn
         }
-        self.currentUser = nil
+        currentUser = nil
     }
-    
-    /**
-     * Get the connected user.
-     */
-    public func getConnectedUser() -> User? {
-        return self.currentUser
     }
-}
 
 enum UserServiceError: Error {
     case registerFail
