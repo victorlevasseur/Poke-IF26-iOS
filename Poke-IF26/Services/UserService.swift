@@ -14,7 +14,7 @@ import Foundation
 class UserService {
     
     private static var instance: UserService? = nil
-        
+    
     private init() {
         
     }

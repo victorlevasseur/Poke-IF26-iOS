@@ -10,6 +10,8 @@ import GoogleMaps
 import Squeal
 import UIKit
 
+var currentUser : User? = nil;
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
