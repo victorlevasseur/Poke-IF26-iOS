@@ -37,10 +37,25 @@ class UserDao {
             throw UserDaoError.selectFail
         }
     }
+    
+    public func update(user: User) throws {
+        let db = DatabaseService.getInstance().getDb();
+        do {
+            try db.update(
+                "users",
+                setExpr: "login = ?, hash = ?, salt = ?",
+                whereExpr: "id = ?",
+                parameters: [user.login, user.hash, user.salt, user.id]
+            )
+        } catch {
+            throw UserDaoError.updateFail
+        }
+    }
 }
 
 enum UserDaoError: Error {
     case insertFail
     case selectFail
     case notFound
+    case updateFail
 }

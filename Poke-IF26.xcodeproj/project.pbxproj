@@ -38,6 +38,7 @@
 		A4794C4F1FF110880029B2F4 /* FetchedPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4794C4E1FF110880029B2F4 /* FetchedPokemon.swift */; };
 		A4794C511FF119810029B2F4 /* PokemonsInitializerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4794C501FF119810029B2F4 /* PokemonsInitializerService.swift */; };
 		A49A8F291FDFD13A0070D7A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */; };
+		A4DF9F9C20012AA00093228E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DF9F9B20012AA00093228E /* AccountViewController.swift */; };
 		A4E178151FE4498900FE216B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E178141FE4498800FE216B /* RxSwift.framework */; };
 		A4E178171FE4499D00FE216B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E178161FE4499D00FE216B /* RxCocoa.framework */; };
 		A4E178181FE449AD00FE216B /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A4E178161FE4499D00FE216B /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -123,6 +124,7 @@
 		A4794C501FF119810029B2F4 /* PokemonsInitializerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsInitializerService.swift; sourceTree = "<group>"; };
 		A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A49A8F2A1FDFDC120070D7A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A4DF9F9B20012AA00093228E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A4E178141FE4498800FE216B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		A4E178161FE4499D00FE216B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		A4FDF1D01FE1849200D52EA7 /* PokedexTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTableViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				A49A8F281FDFD13A0070D7A1 /* MapViewController.swift */,
 				A4FDF1D01FE1849200D52EA7 /* PokedexTableViewController.swift */,
 				A42E29AC1FFA933100C1EC38 /* EncounterViewController.swift */,
+				A4DF9F9B20012AA00093228E /* AccountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				93BC28FA1FD55F4A0034351D /* CryptoService.swift in Sources */,
 				73061EAD1FD1ACF10036F230 /* DatabaseService.swift in Sources */,
 				936D64231FD1868700FDA2E3 /* ViewController.swift in Sources */,
+				A4DF9F9C20012AA00093228E /* AccountViewController.swift in Sources */,
 				936D64211FD1868700FDA2E3 /* AppDelegate.swift in Sources */,
 				9336E2581FD9720200A78BE1 /* UserDao.swift in Sources */,
 				A4FDF1D51FE186E500D52EA7 /* Pokemon.swift in Sources */,

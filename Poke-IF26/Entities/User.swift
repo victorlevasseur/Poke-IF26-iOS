@@ -11,9 +11,9 @@ import Squeal
 
 struct User {
     let id: Int64?
-    let login: String?
-    let hash: String?
-    let salt: String?
+    var login: String?
+    var hash: String?
+    var salt: String?
     
     init(row: Statement) {
         id = row.int64Value("id")

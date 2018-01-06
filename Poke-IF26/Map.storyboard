@@ -13,10 +13,36 @@
         <!--Mon compte-->
         <scene sceneID="lRx-hW-Kpt">
             <objects>
-                <viewController id="eRC-AA-Xtx" sceneMemberID="viewController">
+                <viewController id="eRC-AA-Xtx" customClass="AccountViewController" customModule="Poke_IF26" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n84-Sx-07V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZh-CP-0Ye">
+                                <rect key="frame" x="122" y="39" width="171" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Changer le mot de passe"/>
+                                <connections>
+                                    <action selector="onPassClick:" destination="eRC-AA-Xtx" eventType="touchUpInside" id="ukO-q5-cbI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVO-wQ-DdD">
+                                <rect key="frame" x="135" y="186" width="144" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Supprimer le compte"/>
+                                <connections>
+                                    <action selector="onDeleteClick:" destination="eRC-AA-Xtx" eventType="touchUpInside" id="8nH-wo-9xq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oat-dL-iqB">
+                                <rect key="frame" x="138" y="112" width="138" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Changer l'identifiant"/>
+                                <connections>
+                                    <action selector="onIdClick:" destination="eRC-AA-Xtx" eventType="touchUpInside" id="Azx-AA-9Lu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8cL-si-LFC"/>
                     </view>
@@ -83,7 +109,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHH-tk-0GP">
-                                <rect key="frame" x="-14" y="589" width="374" height="50"/>
+                                <rect key="frame" x="20" y="586" width="374" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.73036708090988012" blue="0.64802756854483379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Capturer">

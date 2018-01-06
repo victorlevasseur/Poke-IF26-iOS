@@ -60,6 +60,25 @@ class UserService {
         }
     }
     
+    public func changePassword(user: User, password: String) throws {
+        let cryptoService = CryptoService();
+        let userDao = UserDao();
+        var newUser = user;
+        
+        do {
+            let salt = try cryptoService.randomSalt();
+            let hash = try cryptoService.deriveKeyFromPassword(password: password, salt: salt);
+            
+            let saltData = Data(bytes: salt, count: 30);
+            newUser.hash = hash;
+            newUser.salt = saltData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0));
+            
+            try userDao.update(user: newUser);
+        } catch {
+            throw UserServiceError.updateFail
+        }
+    }
+    
     /**
      * Attempt a login with the login and password pair.
      * @return the connected user.
@@ -114,4 +133,5 @@ enum UserServiceError: Error {
     case invalidCredentials
     case alreadyLoggedIn
     case notLoggedIn
+    case updateFail
 }
