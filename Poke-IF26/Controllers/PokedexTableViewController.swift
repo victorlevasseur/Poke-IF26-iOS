@@ -13,16 +13,29 @@ import RxCocoa
 class PokedexTableViewController: UITableViewController {
 
     //TODO : get this from PokemonDao
-    let ownedPokemons = [1, 25, 30];
+    var ownedPokemons : [Pokemon] = [];
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
+
+        self.loadOwnedPokemons();
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    public func loadOwnedPokemons(pokemonDao: PokemonDao = PokemonDao()) {
+        do {
+            try self.ownedPokemons = pokemonDao.getPokemonsCapturedByUser(user: currentUser!);
+        } catch {
+            let alertController = UIAlertController(title: "Pokedex", message: "Erreur de base de donnée", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,12 +51,10 @@ class PokedexTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return ownedPokemons.count
     }
 
@@ -54,7 +65,8 @@ class PokedexTableViewController: UITableViewController {
         cell.detailTextLabel?.text = ""
         
         let id = indexPath.row;
-        let _ = httpClientService.getJson(path: "https://pokeapi.co/api/v2/pokemon/\(ownedPokemons[id])")
+        print("https://pokeapi.co/api/v2/pokemon/\(ownedPokemons[id].id!)");
+        let _ = httpClientService.getJson(path: "https://pokeapi.co/api/v2/pokemon/\(ownedPokemons[id].id!)")
             .observeOn(MainScheduler.instance)
             .subscribe { event in
                 switch event {
